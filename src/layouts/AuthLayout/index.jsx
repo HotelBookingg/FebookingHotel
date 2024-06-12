@@ -7,15 +7,15 @@ import { useSelector } from "react-redux";
 
 function AuthLayout() {
   const navigate = useNavigate();
-  // const { userInfo } = useSelector((state) => state.auth);
-  // useEffect(() => {
-  //   if (userInfo.data.id) {
-  //     if (userInfo.data.role === "admin") {
-  //       return navigate(ROUTES.ADMIN.DASHBOARD);
-  //     }
-  //     return navigate(ROUTES.USER.HOME);
-  //   }
-  // }, [userInfo.data.id]);
+  const { userInfo } = useSelector((state) => state.auth);
+  useEffect(() => {
+    if (userInfo.data.id) {
+      if (userInfo.data.role === "admin") {
+        return navigate(ROUTES.ADMIN.DASHBOARD);
+      }
+      return navigate(ROUTES.USER.HOME);
+    }
+  }, [userInfo.data.id]);
   return (
     <>
       <div>

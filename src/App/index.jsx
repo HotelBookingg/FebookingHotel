@@ -1,22 +1,45 @@
 import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
 // import { useDispatch, useSelector } from "react-redux";
+import { getUserInfoRequest } from "../redux/slicers/auth.slicer";
 import { ROUTES } from "../constants/routes";
-import { useEffect } from "react";
-import Login from "../pages/User/Login";
-import Register from "../pages/User/Register";
 import * as S from "./style";
-import { useState } from "react";
 
-import AuthLayout from "../layouts/AuthLayout";
-import UserLayout from "layouts/UserLayout";
+import { useEffect } from "react";
+
+import { useState } from "react";
 import { useDispatch } from "react-redux";
+import { jwtDecode } from "jwt-decode";
+
+import UserLayout from "layouts/UserLayout";
+import AuthLayout from "../layouts/AuthLayout";
 import NotFoundPage from "../layouts/NotFound";
 
+import Login from "../pages/User/Login";
+import Register from "../pages/User/Register";
 import Home from "pages/User/Home";
 import HotelDetail from "pages/User/HotelDetail";
+import Checkout from "pages/User/Checkout";
+import Bill from "pages/User/Bill";
+
 function App() {
   const dispatch = useDispatch();
   const [isShowLoading, setIsShowLoading] = useState(false);
+
+  useEffect(() => {
+    setIsShowLoading();
+  }, []);
+
+  useEffect(() => {
+    const accessToken = localStorage.getItem("accessToken");
+    if (accessToken) {
+      const tokenData = jwtDecode(accessToken);
+      dispatch(
+        getUserInfoRequest({
+          id: parseInt(tokenData.sub),
+        })
+      );
+    }
+  }, []);
 
   return (
     <>
@@ -37,7 +60,9 @@ function App() {
           <Route path="/" element={<Navigate to={ROUTES.USER.HOME} />}></Route>
           <Route path={ROUTES.USER.HOME} element={<Home />} />
           <Route path={ROUTES.USER.HOTEL_DETAIL} element={<HotelDetail />} />
+          <Route path={ROUTES.USER.CHECKOUT} element={<Checkout />} />
         </Route>
+        <Route path={ROUTES.USER.BILL} element={<Bill />} />
         <Route element={<AuthLayout />}>
           <Route path={ROUTES.LOGIN} element={<Login />} />
           <Route path={ROUTES.REGISTER} element={<Register />} />

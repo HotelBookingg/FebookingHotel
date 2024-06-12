@@ -1,23 +1,37 @@
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { getHotelListRequest } from "../../../redux/slicers/hotel.slicer";
 import { useDispatch, useSelector } from "react-redux";
+import qs from "qs";
 import * as S from "./style";
 import { Button, Col, Row, Skeleton, Space } from "antd";
-import { Link, generatePath } from "react-router-dom";
+import { Link, generatePath, useLocation } from "react-router-dom";
 import { ROUTES } from "constants/routes";
 function Home() {
+  const [filterParams, setFilterParams] = useState({});
+
   const { hotelList } = useSelector((state) => state.hotel);
   const dispatch = useDispatch();
 
   const { data, loading } = hotelList;
+
+  const { search } = useLocation();
+
   useEffect(() => {
+    const searchParams = qs.parse(search, {
+      ignoreQueryPrefix: true,
+    });
+    const newFilterParams = {
+      searchKey: searchParams.searchKey || "",
+    };
+    setFilterParams(newFilterParams);
     dispatch(
       getHotelListRequest({
         page: 1,
         limit: 8,
+        ...newFilterParams,
       })
     );
-  }, []);
+  }, [search]);
 
   const handleShowMore = () => {
     dispatch(
@@ -101,7 +115,7 @@ function Home() {
   return (
     <S.HotelListWrapper>
       <Row gutter={[16, 16]} style={{ marginTop: 16 }}>
-        <Row gutter={[16, 16]} style={{ marginTop: 16 }}>
+        <Row gutter={[16, 16]} style={{ marginTop: 16, width: "100%" }}>
           {renderHotelList}
         </Row>
         {data.length !== hotelList.meta.total && (

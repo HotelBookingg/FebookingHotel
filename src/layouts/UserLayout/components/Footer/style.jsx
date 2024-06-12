@@ -30,6 +30,9 @@ export const DESC = styled.div`
 export const Title = styled.h1`
   color: #5a5858;
   font-size: 70px;
+  @media screen and (max-width: 450px) {
+    font-size: 50px;
+  }
 `;
 export const SubTitle = styled.p`
   margin: 10px 0 20px;

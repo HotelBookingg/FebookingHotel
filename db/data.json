@@ -1,5 +1,42 @@
 {
-  "users": [],
+  "users": [
+    {
+      "email": "ZXGeiQQK@gmail.com",
+      "password": "$2a$10$Fh1jzHbpoErowY/IPjgNeuc5rUsY8fgVJc/A1MHf7wujp8Z0bYORW",
+      "idSocial": "7eLOWpiKFvWs9goHMNVPsZxo0qB3",
+      "fullName": "Ngô Văn Trị",
+      "phoneNumber": "",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrZRHHcRuOyLqUlNqrvsA6jUy6j_KJwbJaOQrEoE-f&s",
+      "createdAt": 1717587120038,
+      "updatedAt": 1717587120038,
+      "isDelete": false,
+      "id": 1
+    },
+    {
+      "email": "txPTqjJq@gmail.com",
+      "password": "$2a$10$Iy9/B/ABcu1e70W.Hg9gOOnuJtBXVhZ3ai6sUWBwgjfZ6fs4RVDWW",
+      "idSocial": "e4teOXecTWhfGTYduvT2YLSnJzG3",
+      "fullName": "Văn Trị Ngô",
+      "phoneNumber": "",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrZRHHcRuOyLqUlNqrvsA6jUy6j_KJwbJaOQrEoE-f&s",
+      "createdAt": 1717587253793,
+      "updatedAt": 1717587253793,
+      "isDelete": false,
+      "id": 2
+    },
+    {
+      "email": "EfhaHAxy@gmail.com",
+      "password": "$2a$10$lDyua83D4ddfL0f7M0117eiV734ALk57al5dfKvqKFG2cl9j/IAZW",
+      "idSocial": "YpP95wyXbkcU3gER6zVnXR6uPgJ3",
+      "fullName": "Ngô Văn Trị",
+      "phoneNumber": "",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrZRHHcRuOyLqUlNqrvsA6jUy6j_KJwbJaOQrEoE-f&s",
+      "createdAt": 1717590369908,
+      "updatedAt": 1717590369908,
+      "isDelete": false,
+      "id": 3
+    }
+  ],
   "hotels": [
     {
       "id": 1,
@@ -60,12 +97,12 @@
           "mileage": 868
         },
         {
-          "name": "Danang Cathedral",
+          "name": "Hồ Chí Minh Cathedral",
           "mileage": 2840
         }
       ],
       "introduce": "Davue Hotel Da Nang là một khách sạn nằm trong khu vực an ninh, toạ lạc tại Mỹ An. Quầy tiếp tân 24 giờ luôn sẵn sàng phục vụ quý khách từ thủ tục nhận phòng đến trả phòng hay bất kỳ yêu cầu nào. Nếu cần giúp đỡ xin hãy liên hệ đội ngũ tiếp tân.",
-      "addressDetail": "57-59 Đỗ Bí, Mỹ An, Ngũ Hành Sơn, Đà Nẵng, Việt Nam, 55000"
+      "addressDetail": "57-59 Đỗ Bí, Mỹ An, Ngũ Hành Sơn, Hồ Chí Minh, Việt Nam, 55000"
     },
     {
       "id": 3,
@@ -98,7 +135,7 @@
         }
       ],
       "introduce": "Davue Hotel Da Nang là một khách sạn nằm trong khu vực an ninh, toạ lạc tại Mỹ An. Quầy tiếp tân 24 giờ luôn sẵn sàng phục vụ quý khách từ thủ tục nhận phòng đến trả phòng hay bất kỳ yêu cầu nào. Nếu cần giúp đỡ xin hãy liên hệ đội ngũ tiếp tân.",
-      "addressDetail": "57-59 Đỗ Bí, Mỹ An, Ngũ Hành Sơn, Đà Nẵng, Việt Nam, 55000"
+      "addressDetail": "57-59 Đỗ Bí, Mỹ An, Ngũ Hành Sơn, Hà Nội, Việt Nam, 55000"
     },
     {
       "id": 4,
@@ -126,12 +163,12 @@
           "mileage": 868
         },
         {
-          "name": "Danang Cathedral",
+          "name": "Huế Cathedral",
           "mileage": 2840
         }
       ],
       "introduce": "Davue Hotel Da Nang là một khách sạn nằm trong khu vực an ninh, toạ lạc tại Mỹ An. Quầy tiếp tân 24 giờ luôn sẵn sàng phục vụ quý khách từ thủ tục nhận phòng đến trả phòng hay bất kỳ yêu cầu nào. Nếu cần giúp đỡ xin hãy liên hệ đội ngũ tiếp tân.",
-      "addressDetail": "57-59 Đỗ Bí, Mỹ An, Ngũ Hành Sơn, Đà Nẵng, Việt Nam, 55000"
+      "addressDetail": "57-59 Đỗ Bí, Mỹ An, Ngũ Hành Sơn, Huế, Việt Nam, 55000"
     },
     {
       "id": 5,
@@ -164,7 +201,7 @@
         }
       ],
       "introduce": "Davue Hotel Da Nang là một khách sạn nằm trong khu vực an ninh, toạ lạc tại Mỹ An. Quầy tiếp tân 24 giờ luôn sẵn sàng phục vụ quý khách từ thủ tục nhận phòng đến trả phòng hay bất kỳ yêu cầu nào. Nếu cần giúp đỡ xin hãy liên hệ đội ngũ tiếp tân.",
-      "addressDetail": "57-59 Đỗ Bí, Mỹ An, Ngũ Hành Sơn, Đà Nẵng, Việt Nam, 55000"
+      "addressDetail": "57-59 Đỗ Bí, Mỹ An, Ngũ Hành Sơn, Hội An, Việt Nam, 55000"
     },
     {
       "id": 6,
@@ -395,6 +432,36 @@
         "https://ik.imagekit.io/tvlk/apr-asset/Ixf4aptF5N2Qdfmh4fGGYhTN274kJXuNMkUAzpL5HuD9jzSxIGG5kZNhhHY-p7nw/hotel/asset/20065178-7e324096cc976daee6aed2e527a1b853.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640",
         "https://ik.imagekit.io/tvlk/apr-asset/Ixf4aptF5N2Qdfmh4fGGYhTN274kJXuNMkUAzpL5HuD9jzSxIGG5kZNhhHY-p7nw/hotel/asset/20065178-7e324096cc976daee6aed2e527a1b853.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640"
       ]
+    }
+  ],
+  "bills": [
+    {
+      "userId": 1,
+      "pay": "no",
+      "fullName": "Ngô Văn Trị",
+      "email": "vantri2912@gmail.com",
+      "phoneNumber": "0912683524",
+      "checkInDate": "2024-06-12",
+      "checkoutDate": "2024-06-15",
+      "createdAt": 1718093620580,
+      "updatedAt": 1718093620580,
+      "isDelete": false,
+      "id": 1
+    },
+    {
+      "userId": 3,
+      "pay": "no",
+      "billId": "c972fcb5-21bf-4e82-b0ff-c256aa184bd1",
+      "hotelId": "4",
+      "fullName": "Ngô Văn Trị",
+      "email": "ngovantri2912@gmail.com",
+      "phoneNumber": "0912683524",
+      "checkInDate": "2024-06-12",
+      "checkoutDate": "2024-06-17",
+      "createdAt": 1718107643934,
+      "updatedAt": 1718107643934,
+      "isDelete": false,
+      "id": 2
     }
   ]
 }

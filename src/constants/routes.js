@@ -3,8 +3,9 @@ export const ROUTES = {
     HOME: "/home",
     HOTEL_DETAIL: "/hotel/:id",
     CART: "/cart",
+    CHECKOUT: "/checkout/:id",
+    BILL: "/bill/:id",
   },
-  ADMIN: {},
   LOGIN: "/login",
   REGISTER: "/register",
 };

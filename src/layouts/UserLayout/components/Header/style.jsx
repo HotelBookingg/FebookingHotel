@@ -9,7 +9,7 @@ export const HeaderWrapper = styled.div`
   z-index: 300;
   padding-bottom: 16px;
   box-shadow: 0 0 25px ${color.primary};
-  @media screen and (min-width: 767px) and (max-width: 1024px) {
+  @media screen and (min-width: 400px) and (max-width: 1024px) {
     height: auto;
   }
 `;
@@ -18,18 +18,20 @@ export const header = styled(Row)`
   max-width: 1200px;
   margin: 0 auto 0 !important;
   align-items: center;
+  @media screen and (min-width: 400px) and (max-width: 1024px) {
+    margin-top: 15px !important;
+  }
 `;
 export const ImageLogo = styled.img`
   width: 200px;
   height: 100px;
   max-width: 100%;
-  @media screen and (max-width: 450px) {
-    width: 135px;
-    height: 18px;
-  }
 `;
 export const SearchColumn = styled(Col)`
   position: relative;
+  @media screen and (min-width: 400px) and (max-width: 1024px) {
+    margin-top: 15px;
+  }
 `;
 export const InputSearch = styled(Input)`
   padding: 4px 8px;
@@ -44,10 +46,11 @@ export const Login = styled(Col)`
   display: flex;
   align-items: center;
   cursor: pointer;
+  gap: 7px;
 `;
 export const HeadingLogin = styled(Col)`
-  font-size: 1rem;
-  color: ${color.primary};
+  font-size: 1.2rem;
+  color: ${color.primaryText};
 `;
 export const HeaderLogo = styled(Col)`
   display: flex;

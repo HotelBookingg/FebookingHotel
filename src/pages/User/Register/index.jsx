@@ -6,49 +6,49 @@ import { useEffect } from "react";
 import * as S from "./style";
 // import { registerRequest } from "redux/slicers/auth.slice";
 import { ROUTES } from "../../../constants/routes";
+import { registerRequest } from "../../../redux/slicers/auth.slicer";
 function Register() {
-  //   const [registerForm] = Form.useForm();
-  //   const { registerData } = useSelector((state) => state.auth);
-  //   const dispatch = useDispatch();
-  //   const navigate = useNavigate();
+  const [registerForm] = Form.useForm();
+  const { registerData } = useSelector((state) => state.auth);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   useEffect(() => {
     document.title = "Register Page";
   }, []);
 
-  //   useEffect(() => {
-  //     if (registerData?.error) {
-  //       registerForm.setFields([
-  //         {
-  //           name: "email",
-  //           errors: [registerData.error],
-  //         },
-  //       ]);
-  //     }
-  //   }, [registerData?.error]);
+  useEffect(() => {
+    if (registerData?.error) {
+      registerForm.setFields([
+        {
+          name: "email",
+          errors: [registerData.error],
+        },
+      ]);
+    }
+  }, [registerData?.error]);
 
-  //   const handleSubmit = (values) => {
-  //     const { confirm, ...rest } = values;
-  //     dispatch(
-  //       registerRequest({
-  //         data: {
-  //           addressDefaultId: undefined,
-  //           ...rest,
-  //           role: "user",
-  //           avatar:
-  //             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrZRHHcRuOyLqUlNqrvsA6jUy6j_KJwbJaOQrEoE-f&s",
-  //         },
-  //         callback: () => navigate(ROUTES.LOGIN),
-  //       })
-  //     );
-  //   };
+  const handleSubmit = (values) => {
+    const { confirm, ...rest } = values;
+    dispatch(
+      registerRequest({
+        data: {
+          ...rest,
+          role: "user",
+          avatar:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrZRHHcRuOyLqUlNqrvsA6jUy6j_KJwbJaOQrEoE-f&s",
+        },
+        callback: () => navigate(ROUTES.LOGIN),
+      })
+    );
+  };
   return (
     <S.RegisterWrapper>
       <Col md={24}>
         <S.FormRegister gutter={[16, 16]} justify={"center"}>
           <Col xs={20} md={14} lg={9}>
             <Form
-              //   form={registerForm}
+              form={registerForm}
               name="basic"
               initialValues={{
                 remember: true,
@@ -59,7 +59,7 @@ function Register() {
                 maxWidth: 600,
               }}
               size="large"
-              //   onFinish={(values) => handleSubmit(values)}
+              onFinish={(values) => handleSubmit(values)}
             >
               <Form.Item
                 label="Họ và tên"

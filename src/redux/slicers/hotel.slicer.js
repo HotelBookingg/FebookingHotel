@@ -12,6 +12,16 @@ const initialState = {
     loading: false,
     error: null,
   },
+  searchSuggestions: {
+    data: [],
+    loading: false,
+    error: null,
+  },
+  searchHistories: {
+    data: [],
+    loading: false,
+    error: null,
+  },
 };
 
 export const hotelSlice = createSlice({
@@ -49,6 +59,36 @@ export const hotelSlice = createSlice({
       state.hotelDetail.loading = false;
       state.hotelDetail.error = error;
     },
+    // createSearchHistory
+    createSearchHistoryRequest: (state, action) => {
+      state.searchHistory.loading = true;
+      state.searchHistory.error = null;
+    },
+    createSearchHistorySuccess: (state, action) => {
+      const { data } = action.payload;
+      state.searchHistories.data.unshift(data);
+      state.searchHistories.loading = false;
+    },
+    createSearchHistoryFailure: (state, action) => {
+      const { error } = action.payload;
+      state.searchHistories.loading = false;
+      state.searchHistories.error = error;
+    },
+    // getSearchHistory
+    getSearchHistoryRequest: (state, action) => {
+      state.searchHistories.loading = true;
+      state.searchHistories.error = null;
+    },
+    getSearchHistorySuccess: (state, action) => {
+      const { data } = action.payload;
+      state.searchHistories.data = data;
+      state.searchHistories.loading = false;
+    },
+    getSearchHistoryFailure: (state, action) => {
+      const { error } = action.payload;
+      state.searchHistories.loading = false;
+      state.searchHistories.error = error;
+    },
   },
 });
 
@@ -59,6 +99,15 @@ export const {
   getHotelDetailRequest,
   getHotelListFailure,
   getHotelListSuccess,
+  // getSearchSuggestionRequest,
+  // getSearchSuggestionFailure,
+  // getSearchSuggestionSuccess,
+  createSearchHistoryRequest,
+  createSearchHistorySuccess,
+  createSearchHistoryFailure,
+  getSearchHistoryRequest,
+  getSearchHistorySuccess,
+  getSearchHistoryFailure,
 } = hotelSlice.actions;
 
 export default hotelSlice.reducer;

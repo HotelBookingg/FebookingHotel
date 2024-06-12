@@ -1,51 +1,116 @@
-import { Form, Input, Button, Col } from "antd";
+import { Form, Input, Button, Col, notification } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import {
-  FaEnvelope,
-  FaFacebookSquare,
-  FaInstagram,
-  FaLock,
-  FaWeibo,
-} from "react-icons/fa";
-
+import { FaEnvelope, FaFacebookSquare, FaLock } from "react-icons/fa";
+import { v4 } from "uuid";
+import firebase, { auth } from "../../../firebase/config";
 import { ROUTES } from "../../../constants/routes";
-// import { loginRequest } from "redux/slicers/auth.slice";
+
+import {
+  loginRequest,
+  registerRequest,
+  searchUserRequest,
+  registerAndLoginRequest,
+} from "../../../redux/slicers/auth.slicer";
 import * as S from "./style";
+import { FaGoogle, FaTwitter } from "react-icons/fa6";
+const fbProvider = new firebase.auth.FacebookAuthProvider();
+const googleProvider = new firebase.auth.GoogleAuthProvider();
+const twitterProvider = new firebase.auth.TwitterAuthProvider();
+
 function Login() {
   const [loginForm] = Form.useForm();
 
-  // const { loginData } = useSelector((state) => state.auth);
+  const { loginData, registerData } = useSelector((state) => state.auth);
+  const { userList } = useSelector((state) => state.auth);
 
   useEffect(() => {
+    dispatch(searchUserRequest({}));
     document.title = "Login page";
   }, []);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  useEffect(() => {
+    if (loginData.error) {
+      loginForm.setFields([
+        {
+          name: "email",
+          errors: [" "],
+        },
+        {
+          name: "password",
+          errors: [loginData.error],
+        },
+      ]);
+    }
+  }, [loginData.error]);
+  const handleSubmit = (values) => {
+    dispatch(
+      loginRequest({
+        data: values,
+      })
+    );
+  };
+  const handleBySocialLogin = (provider) => {
+    if (window.popupInProgress) {
+      notification.error({
+        message:
+          "Một cửa sổ bật lên đăng nhập đã được mở. Vui lòng hoàn tất quá trình đăng nhập hiện tại!!",
+      });
+      return;
+    }
+    window.popupInProgress = true;
 
-  // useEffect(() => {
-  //   if (loginData.error) {
-  //     loginForm.setFields([
-  //       {
-  //         name: "email",
-  //         errors: [" "],
-  //       },
-  //       {
-  //         name: "password",
-  //         errors: [loginData.error],
-  //       },
-  //     ]);
-  //   }
-  // }, [loginData.error]);
-  // const handleSubmit = (values) => {
-  //   dispatch(
-  //     loginRequest({
-  //       data: values,
-  //     })
-  //   );
-  // };
+    auth
+      .signInWithPopup(provider)
+      .then((result) => {
+        const user = result.user;
+        const characters =
+          "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+        let email = "";
+        for (let i = 0; i < 8; i++) {
+          email += characters.charAt(
+            Math.floor(Math.random() * characters.length)
+          );
+        }
+        const newArr = [...userList.data];
+        const index = newArr.findIndex((item) => item.idSocial === user.uid);
+
+        if (index !== -1) {
+          const accountSocial = newArr.splice(index, 1);
+          const { password, ...rest } = accountSocial[0];
+          dispatch(
+            loginRequest({ data: { password: "Tri@0935068648", ...rest } })
+          );
+        } else {
+          const newUserData = {
+            idSocial: user.uid,
+            email: email + "@gmail.com",
+            fullName: user.displayName,
+            password: "Tri@0935068648",
+            phoneNumber: "",
+            avatar:
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrZRHHcRuOyLqUlNqrvsA6jUy6j_KJwbJaOQrEoE-f&s",
+          };
+          dispatch(
+            registerAndLoginRequest({
+              data: newUserData,
+            })
+          );
+        }
+      })
+      .catch((error) => {
+        console.error("Error during sign-in with popup:", error);
+      })
+      .finally(() => {
+        window.popupInProgress = false;
+      });
+  };
+
+  window.popupInProgress = false;
+
   return (
     <S.LoginWrapper>
       <Col sm={24} xs={24} md={24} lg={24}>
@@ -74,18 +139,32 @@ function Login() {
                 labelCol={{ span: 24 }}
                 wrapperCol={{ span: 24 }}
                 size="large"
-                // onFinish={(values) => handleSubmit(values)}
+                onFinish={(values) => handleSubmit(values)}
               >
                 <S.HeadingRight>Đăng Nhập</S.HeadingRight>
                 <S.Social>
                   <S.Icon>
-                    <FaFacebookSquare size={20} color="#9a9a9a" />
+                    <FaFacebookSquare
+                      onClick={() => handleBySocialLogin(fbProvider)}
+                      size={20}
+                      color="#9a9a9a"
+                    />
                   </S.Icon>
                   <S.Icon>
-                    <FaInstagram size={20} color="#9a9a9a" />
+                    <FaTwitter
+                      onClick={() => {
+                        handleBySocialLogin(twitterProvider);
+                      }}
+                      size={20}
+                      color="#9a9a9a"
+                    />
                   </S.Icon>
                   <S.Icon>
-                    <FaWeibo size={20} color="#9a9a9a" />
+                    <FaGoogle
+                      onClick={() => handleBySocialLogin(googleProvider)}
+                      size={20}
+                      color="#9a9a9a"
+                    />
                   </S.Icon>
                 </S.Social>
                 <S.SubHeadingRight>
@@ -135,7 +214,7 @@ function Login() {
                   }}
                 >
                   <Button
-                    // loading={loginData.loading}
+                    loading={loginData.loading}
                     type="primary"
                     htmlType="submit"
                     block

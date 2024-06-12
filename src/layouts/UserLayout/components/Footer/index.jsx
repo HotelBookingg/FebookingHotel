@@ -1,6 +1,4 @@
 import * as S from "./style";
-import { Link } from "react-router-dom";
-import { ROUTES } from "constants/routes";
 import { Col, Row } from "antd";
 
 import {
@@ -16,14 +14,14 @@ function Footer() {
   return (
     <S.FooterWrapper>
       <S.Footer justify={"space-between"} gutter={[64, 32]}>
-        <Col span={10}>
+        <Col xl={10} md={12} xs={24} sm={12}>
           <S.Title>HOTEL</S.Title>
           <S.SubTitle>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
           </S.SubTitle>
           <Row gutter={[16, 16]}>
-            <Col span={12}>
+            <Col md={12} sm={12} xs={24}>
               <S.AppSore>
                 <S.IconAppStore>
                   <FaPlay size={25} color="#5a5858" />
@@ -31,7 +29,7 @@ function Footer() {
                 PlayStore
               </S.AppSore>
             </Col>
-            <Col span={12}>
+            <Col md={12} sm={12} xs={24}>
               <S.AppSore>
                 <S.IconAppStore>
                   <FaAppStoreIos size={25} color="#5a5858" />
@@ -41,7 +39,7 @@ function Footer() {
             </Col>
           </Row>
         </Col>
-        <Col span={14} style={{ marginTop: "15px" }}>
+        <Col xl={14} md={12} xs={24} sm={12} style={{ marginTop: "15px" }}>
           <Row gutter={[16, 16]}>
             <S.Information xs={24} xl={8}>
               <S.Heading>COMPANY</S.Heading>

@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, generatePath, useParams } from "react-router-dom";
 import { getHotelDetailRequest } from "../../../redux/slicers/hotel.slicer";
 import { useEffect, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -13,6 +13,7 @@ import {
 } from "react-icons/fa6";
 import * as S from "./style";
 import { color } from "themes/color";
+import { ROUTES } from "constants/routes";
 
 function HotelDetail() {
   const dispatch = useDispatch();
@@ -92,7 +93,9 @@ function HotelDetail() {
           <S.PriceAndChoose>
             <p style={{ fontWeight: "650" }}>Giá/Phòng/Đêm từ</p>
             <S.Price>{data?.priceCurrent}.000 VNĐ</S.Price>
-            <S.ChooseHotel>Chọn Phòng</S.ChooseHotel>
+            <Link to={generatePath(ROUTES.USER.CHECKOUT, { id: id })}>
+              <S.ChooseHotel>Chọn Phòng</S.ChooseHotel>
+            </Link>
           </S.PriceAndChoose>
         </Col>
         <Col span={10}>

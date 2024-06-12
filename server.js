@@ -1,6 +1,6 @@
 // import * as fs from "fs";
 const jsonServer = require("json-server");
-// const auth = require("json-server-auth");
+const auth = require("json-server-auth");
 const dayjs = require("dayjs");
 
 const server = jsonServer.create();
@@ -31,6 +31,6 @@ server.use((req, res, next) => {
   next();
 });
 
-// server.use(auth);
+server.use(auth);
 server.use(router);
 server.listen(4000);
