@@ -70,11 +70,11 @@ export const Title = styled(Col)`
   font-size: 1.1rem;
 `;
 export const InfoRoom = styled.div`
+  margin-top: 20px;
   display: flex;
-  align-items: center;
   justify-content: center;
   width: 100%;
-  height: 250px;
+  height: 50px;
   text-align: center;
   font-size: 1rem;
 `;

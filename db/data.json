@@ -7,9 +7,10 @@
       "fullName": "Ngô Văn Trị",
       "phoneNumber": "",
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrZRHHcRuOyLqUlNqrvsA6jUy6j_KJwbJaOQrEoE-f&s",
-      "createdAt": 1717587120038,
-      "updatedAt": 1717587120038,
+      "createdAt": 1717587120000038,
+      "updatedAt": 1717587120000038,
       "isDelete": false,
+      "role": "user",
       "id": 1
     },
     {
@@ -22,6 +23,7 @@
       "createdAt": 1717587253793,
       "updatedAt": 1717587253793,
       "isDelete": false,
+      "role": "user",
       "id": 2
     },
     {
@@ -34,19 +36,41 @@
       "createdAt": 1717590369908,
       "updatedAt": 1717590369908,
       "isDelete": false,
+      "role": "user",
       "id": 3
+    },
+    {
+      "email": "ngovantri2912@gmail.com",
+      "password": "$2a$10$Zo59z5HiB6Wkvg5v11ihzeaEv5sGGhneWEhYFCSg5oliILwWN5NkS",
+      "fullName": "Ngô Văn Trị",
+      "agree": true,
+      "role": "admin",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrZRHHcRuOyLqUlNqrvsA6jUy6j_KJwbJaOQrEoE-f&s",
+      "createdAt": 1718325257928,
+      "updatedAt": 1718325257928,
+      "isDelete": false,
+      "id": 4
     }
   ],
   "hotels": [
     {
+      "isDelete": false,
       "id": 1,
       "name": "DAVUE HOTEL",
       "image": "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10038281-1228x921-FIT_AND_TRIM-96c5061e4e6b1a533574c8f5c6454d29.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640",
-      "priceOld": 1200,
-      "priceCurrent": 740,
+      "priceOld": 1200000,
+      "priceCurrent": 740000,
       "city": "Đà Nẵng",
       "address": "140 Trưng nữ vương",
       "rate": 4.5,
+      "imageList": [
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10038281-1228x921-FIT_AND_TRIM-96c5061e4e6b1a533574c8f5c6454d29.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640",
+        "https://firebasestorage.googleapis.com/v0/b/bookhotel-60f63.appspot.com/o/files%2Fc866eddd-0852-404b-8717-dac01418479f?alt=media&token=f631e596-4528-46dc-b176-c4576210f20e",
+        "https://firebasestorage.googleapis.com/v0/b/bookhotel-60f63.appspot.com/o/files%2F5988cc75-8980-4c93-8557-7c4a4042e45d?alt=media&token=9cd39fcb-30d4-40e0-980b-498d233f2bec",
+        "https://firebasestorage.googleapis.com/v0/b/bookhotel-60f63.appspot.com/o/files%2F89814bac-d8cf-4e7a-b15a-26ff9c4c85ce?alt=media&token=dc31d576-1ede-4914-a882-0ec2344110b9",
+        "https://firebasestorage.googleapis.com/v0/b/bookhotel-60f63.appspot.com/o/files%2Fdf22b42c-01be-4951-93dd-eb13a6e49100?alt=media&token=94a3033d-82ad-43e1-bf4f-9c6092d331f2",
+        "https://firebasestorage.googleapis.com/v0/b/bookhotel-60f63.appspot.com/o/files%2F1db227b6-cba3-4a60-bdc5-4f7496741cbc?alt=media&token=bb6c1839-7900-4afd-b101-0b3c087bfc29"
+      ],
       "utilities": {
         "wifi": true,
         "airConditioner": true,
@@ -69,17 +93,28 @@
         }
       ],
       "introduce": "Davue Hotel Da Nang là một khách sạn nằm trong khu vực an ninh, toạ lạc tại Mỹ An. Quầy tiếp tân 24 giờ luôn sẵn sàng phục vụ quý khách từ thủ tục nhận phòng đến trả phòng hay bất kỳ yêu cầu nào. Nếu cần giúp đỡ xin hãy liên hệ đội ngũ tiếp tân.",
-      "addressDetail": "57-59 Đỗ Bí, Mỹ An, Ngũ Hành Sơn, Đà Nẵng, Việt Nam, 55000"
+      "addressDetail": "57-59 Đỗ Bí, Mỹ An, Ngũ Hành Sơn, Đà Nẵng, Việt Nam",
+      "updatedAt": 1719015281078
     },
     {
+      "isDelete": false,
       "id": 2,
-      "name": "DAVUE HOTEL",
-      "image": "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10038281-1228x921-FIT_AND_TRIM-96c5061e4e6b1a533574c8f5c6454d29.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640",
-      "priceOld": 1200,
-      "priceCurrent": 740,
-      "city": "Hồ Chí Minh",
-      "address": "1302 Nguyễn Tất Thành",
+      "name": "The Malibu Hotel",
+      "image": "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10028130-92f8f5e7b0fde15824224e36a76172b1.jpeg?_src=imagekit&tr=c-at_max,f-jpg,fo-auto,h-332,pr-true,q-100,w-480",
+      "priceOld": 1200000,
+      "priceCurrent": 740000,
+      "city": "Vũng Tàu",
+      "address": "263 Lê Hồng Phong",
       "rate": 4.5,
+      "imageList": [
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10028130-c53d339559e3a026f703bd3607fbc137.jpeg?_src=imagekit&tr=c-at_max,f-jpg,fo-auto,h-162,pr-true,q-100,w-184",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10028130-ec42700db501360efc3e662f5bf24268.jpeg?_src=imagekit&tr=c-at_max,f-jpg,fo-auto,h-162,pr-true,q-100,w-184",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10028130-1000x667-FIT_AND_TRIM-75d7c9fce59ed3e7ab1839bfa1a756f7.jpeg?_src=imagekit&tr=c-at_max,f-jpg,fo-auto,h-162,pr-true,q-100,w-184",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10028130-c9d3054cc40695a22351df4a9a97bdd6.jpeg?_src=imagekit&tr=c-at_max,f-jpg,fo-auto,h-162,pr-true,q-100,w-184",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10028130-1000x667-FIT_AND_TRIM-75d7c9fce59ed3e7ab1839bfa1a756f7.jpeg?_src=imagekit&tr=c-at_max,f-jpg,fo-auto,h-162,pr-true,q-100,w-184",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10028130-c9d3054cc40695a22351df4a9a97bdd6.jpeg?_src=imagekit&tr=c-at_max,f-jpg,fo-auto,h-162,pr-true,q-100,w-184",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10028130-8f150951cc41b082eb1b9d1e597150f9.jpeg?_src=imagekit&tr=c-at_max,f-jpg,h-435,pr-true,q-100,w-530"
+      ],
       "utilities": {
         "wifi": true,
         "airConditioner": true,
@@ -89,30 +124,41 @@
       },
       "nearTheArea": [
         {
-          "name": "Gần khu vui chơi giải trí",
-          "mileage": 400
+          "name": "Linh Sơn Cổ Tự",
+          "mileage": 1510
         },
         {
-          "name": "Biển Mỹ Khê",
-          "mileage": 868
+          "name": "Bãi Sau",
+          "mileage": 1930
         },
         {
-          "name": "Hồ Chí Minh Cathedral",
-          "mileage": 2840
+          "name": "Lotte Mart Vung Tau",
+          "mileage": 309
         }
       ],
-      "introduce": "Davue Hotel Da Nang là một khách sạn nằm trong khu vực an ninh, toạ lạc tại Mỹ An. Quầy tiếp tân 24 giờ luôn sẵn sàng phục vụ quý khách từ thủ tục nhận phòng đến trả phòng hay bất kỳ yêu cầu nào. Nếu cần giúp đỡ xin hãy liên hệ đội ngũ tiếp tân.",
-      "addressDetail": "57-59 Đỗ Bí, Mỹ An, Ngũ Hành Sơn, Hồ Chí Minh, Việt Nam, 55000"
+      "introduce": "The Malibu Hotel là một khách sạn nằm trong khu vực an ninh, toạ lạc tại Thắng Tam. Quầy tiếp tân 24 giờ luôn sẵn sàng phục vụ quý khách từ thủ tục nhận phòng đến trả phòng hay bất kỳ yêu cầu nào. Nếu cần giúp đỡ xin hãy liên hệ đội ngũ tiếp tân, chúng tôi luôn sẵn sàng hỗ trợ quý khách. Sóng WiFi phủ khắp các khu vực chung của khách sạn cho phép quý khách luôn kết nối với gia đình và bè bạn.",
+      "addressDetail": "263 Lê Hồng Phong, Quận Thắng Tam, Thắng Tam, Vũng Tàu, Bà Rịa - Vũng Tàu, Việt Nam",
+      "updatedAt": 1718884155126
     },
     {
+      "isDelete": false,
       "id": 3,
-      "name": "DAVUE HOTEL",
-      "image": "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10038281-1228x921-FIT_AND_TRIM-96c5061e4e6b1a533574c8f5c6454d29.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640",
-      "priceOld": 1200,
-      "priceCurrent": 740,
-      "city": "Hà Nội",
-      "address": "30 Điện Biên Phủ",
+      "name": "Fleur De Lys Resort",
+      "image": "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20004149-148087c20822cdd4f8aec05e8373af3f.jpeg?_src=imagekit&tr=c-at_max,f-jpg,fo-auto,h-332,pr-true,q-100,w-480",
+      "priceOld": 1600000,
+      "priceCurrent": 1345000,
+      "city": "Vũng Tàu",
+      "address": "Lộ 44A",
       "rate": 4.5,
+      "imageList": [
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20004772-a5c3d5aa91fc686c5b5f50deed19d72b.jpeg?_src=imagekit&tr=c-at_max,f-jpg,fo-auto,h-162,pr-true,q-100,w-184",
+        "https://ik.imagekit.io/tvlk/apr-asset/Ixf4aptF5N2Qdfmh4fGGYhTN274kJXuNMkUAzpL5HuD9jzSxIGG5kZNhhHY-p7nw/hotel/asset/20004772-6b246c53e636ea3e98a8676dca4176be.jpeg?_src=imagekit&tr=c-at_max,f-jpg,fo-auto,h-162,pr-true,q-100,w-184",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20004772-1a634c6971935be61fa874a764efd89c.jpeg?_src=imagekit&tr=c-at_max,f-jpg,fo-auto,h-162,pr-true,q-100,w-184",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20004772-23c355193e99184ac74e5c817eae891b.jpeg?_src=imagekit&tr=c-at_max,f-jpg,fo-auto,h-162,pr-true,q-100,w-184",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20004772-41466758881a69cf3de61bdada62fb22.jpeg?_src=imagekit&tr=c-at_max,f-jpg,fo-auto,h-162,pr-true,q-100,w-184",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20004772-fb97941d67e467a0e8cdb81e591ca142.jpeg?_src=imagekit&tr=c-at_max,f-jpg,fo-auto,h-72,pr-true,q-100,w-108",
+        "https://ik.imagekit.io/tvlk/apr-asset/Ixf4aptF5N2Qdfmh4fGGYhTN274kJXuNMkUAzpL5HuD9jzSxIGG5kZNhhHY-p7nw/hotel/asset/20065178-7e324096cc976daee6aed2e527a1b853.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640"
+      ],
       "utilities": {
         "wifi": true,
         "airConditioner": true,
@@ -122,30 +168,36 @@
       },
       "nearTheArea": [
         {
-          "name": "Gần khu vui chơi giải trí",
-          "mileage": 400
+          "name": "Núi Minh Đạm",
+          "mileage": 1310
         },
         {
-          "name": "Biển Mỹ Khê",
+          "name": "Oceanami Villas & Beach Club",
           "mileage": 868
-        },
-        {
-          "name": "Danang Cathedral",
-          "mileage": 2840
         }
       ],
-      "introduce": "Davue Hotel Da Nang là một khách sạn nằm trong khu vực an ninh, toạ lạc tại Mỹ An. Quầy tiếp tân 24 giờ luôn sẵn sàng phục vụ quý khách từ thủ tục nhận phòng đến trả phòng hay bất kỳ yêu cầu nào. Nếu cần giúp đỡ xin hãy liên hệ đội ngũ tiếp tân.",
-      "addressDetail": "57-59 Đỗ Bí, Mỹ An, Ngũ Hành Sơn, Hà Nội, Việt Nam, 55000"
+      "introduce": "Giao hoà giữa kiến trúc cổ điển Âu châu và phóng khoáng xứ nhiệt đới, Lan Rừng Hải Resort & Spa được ví như một hòn ngọc Địa Trung Hải giữa lòng biển Đông. Dừng chân nơi đây, du khách như lạc bước vào hòn đảo Santorini quyến rũ với những toà kiến trúc trắng - xanh đặc trưng xứ Hi Lạp.",
+      "addressDetail": "Lộ 44A, Phước Hải, Phước Hải, Vũng Tàu, Bà Rịa - Vũng Tàu, Việt Nam"
     },
     {
+      "isDelete": false,
       "id": 4,
-      "name": "DAVUE HOTEL",
-      "image": "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10038281-1228x921-FIT_AND_TRIM-96c5061e4e6b1a533574c8f5c6454d29.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640",
-      "priceOld": 1200,
-      "priceCurrent": 740,
-      "city": "Huế",
-      "address": "140 Trưng nữ vương",
+      "name": "Palace Saigon",
+      "image": "https://ik.imagekit.io/tvlk/apr-asset/Ixf4aptF5N2Qdfmh4fGGYhTN274kJXuNMkUAzpL5HuD9jzSxIGG5kZNhhHY-p7nw/hotel/asset/10022505-9d47b07d40edadf7857af2b9f8b0835e.jpeg?_src=imagekit&tr=c-at_max,f-jpg,fo-auto,h-332,pr-true,q-100,w-480",
+      "priceOld": 1700000,
+      "priceCurrent": 1349000,
+      "city": "Hồ Chí Minh",
+      "address": "56 - 66 Nguyễn Huệ",
       "rate": 4.5,
+      "imageList": [
+        "https://ik.imagekit.io/tvlk/apr-asset/Ixf4aptF5N2Qdfmh4fGGYhTN274kJXuNMkUAzpL5HuD9jzSxIGG5kZNhhHY-p7nw/hotel/asset/10022505-247f511c81864d03e7f75667c68fab8b.jpeg?_src=imagekit&tr=c-at_max,f-jpg,fo-auto,h-162,pr-true,q-100,w-184",
+        "https://ik.imagekit.io/tvlk/apr-asset/Ixf4aptF5N2Qdfmh4fGGYhTN274kJXuNMkUAzpL5HuD9jzSxIGG5kZNhhHY-p7nw/hotel/asset/10022505-a0552be3f2207e15f9885252f6181c12.jpeg?_src=imagekit&tr=c-at_max,f-jpg,fo-auto,h-162,pr-true,q-100,w-184",
+        "https://ik.imagekit.io/tvlk/apr-asset/Ixf4aptF5N2Qdfmh4fGGYhTN274kJXuNMkUAzpL5HuD9jzSxIGG5kZNhhHY-p7nw/hotel/asset/10022505-515f0f87380eaa7f09d2471b6d84180d.jpeg?_src=imagekit&tr=c-at_max,f-jpg,fo-auto,h-162,pr-true,q-100,w-184",
+        "https://ik.imagekit.io/tvlk/apr-asset/Ixf4aptF5N2Qdfmh4fGGYhTN274kJXuNMkUAzpL5HuD9jzSxIGG5kZNhhHY-p7nw/hotel/asset/10022505-515f0f87380eaa7f09d2471b6d84180d.jpeg?_src=imagekit&tr=c-at_max,f-jpg,fo-auto,h-162,pr-true,q-100,w-184",
+        "https://cdn3.ivivu.com/2014/01/Business_Center_Saigon_Tower_2.jpg",
+        "https://ik.imagekit.io/tvlk/apr-asset/Ixf4aptF5N2Qdfmh4fGGYhTN274kJXuNMkUAzpL5HuD9jzSxIGG5kZNhhHY-p7nw/hotel/asset/20065178-7e324096cc976daee6aed2e527a1b853.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640",
+        "https://ik.imagekit.io/tvlk/apr-asset/Ixf4aptF5N2Qdfmh4fGGYhTN274kJXuNMkUAzpL5HuD9jzSxIGG5kZNhhHY-p7nw/hotel/asset/20065178-7e324096cc976daee6aed2e527a1b853.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640"
+      ],
       "utilities": {
         "wifi": true,
         "airConditioner": true,
@@ -167,18 +219,28 @@
           "mileage": 2840
         }
       ],
-      "introduce": "Davue Hotel Da Nang là một khách sạn nằm trong khu vực an ninh, toạ lạc tại Mỹ An. Quầy tiếp tân 24 giờ luôn sẵn sàng phục vụ quý khách từ thủ tục nhận phòng đến trả phòng hay bất kỳ yêu cầu nào. Nếu cần giúp đỡ xin hãy liên hệ đội ngũ tiếp tân.",
-      "addressDetail": "57-59 Đỗ Bí, Mỹ An, Ngũ Hành Sơn, Huế, Việt Nam, 55000"
+      "introduce": "Lưu trú tại Palace Hotel Saigon là một lựa chọn đúng đắn khi quý khách đến thăm Bến Nghé.Quầy tiếp tân 24 giờ luôn sẵn sàng phục vụ quý khách từ thủ tục nhận phòng đến trả phòng hay bất kỳ yêu cầu nào. Nếu cần giúp đỡ xin hãy liên hệ đội ngũ tiếp tân, chúng tôi luôn sẵn sàng hỗ trợ quý khách.Sóng WiFi phủ khắp các khu vực chung của khách sạn cho phép quý khách luôn kết nối với gia đình và bè bạn.",
+      "addressDetail": "56 - 66 Nguyễn Huệ, Bến Nghé, Quận 1, Hồ Chí Minh, Việt Nam"
     },
     {
+      "isDelete": false,
       "id": 5,
-      "name": "DAVUE HOTEL",
-      "image": "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10038281-1228x921-FIT_AND_TRIM-96c5061e4e6b1a533574c8f5c6454d29.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640",
-      "priceOld": 1200,
-      "priceCurrent": 740,
-      "city": "Hội An",
-      "address": "140 Trưng nữ vương",
+      "name": "The Luxe",
+      "image": "https://ik.imagekit.io/tvlk/apr-asset/Ixf4aptF5N2Qdfmh4fGGYhTN274kJXuNMkUAzpL5HuD9jzSxIGG5kZNhhHY-p7nw/hotel/asset/10026141-dd6296e7ccc135d9a3c7f27da66b2de3.png?_src=imagekit&tr=c-at_max,f-jpg,fo-auto,h-332,pr-true,q-100,w-480",
+      "priceOld": 820000,
+      "priceCurrent": 582000,
+      "city": "Đà Lạt",
+      "address": "17-17Bis 3/4",
       "rate": 4.5,
+      "imageList": [
+        "https://cdn3.ivivu.com/2014/01/SUPER-DELUXE2.jpg",
+        "https://cdn3.ivivu.com/2014/01/20762698_images1477905_6.jpg",
+        "https://cdn3.ivivu.com/2014/01/ztq1372403761.jpg",
+        "https://cdn3.ivivu.com/2014/01/Khach-san-Midtown-Hue-4-Sao-Lobby.jpg",
+        "https://cdn3.ivivu.com/2014/01/Business_Center_Saigon_Tower_2.jpg",
+        "https://ik.imagekit.io/tvlk/apr-asset/Ixf4aptF5N2Qdfmh4fGGYhTN274kJXuNMkUAzpL5HuD9jzSxIGG5kZNhhHY-p7nw/hotel/asset/20065178-7e324096cc976daee6aed2e527a1b853.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640",
+        "https://ik.imagekit.io/tvlk/apr-asset/Ixf4aptF5N2Qdfmh4fGGYhTN274kJXuNMkUAzpL5HuD9jzSxIGG5kZNhhHY-p7nw/hotel/asset/20065178-7e324096cc976daee6aed2e527a1b853.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640"
+      ],
       "utilities": {
         "wifi": true,
         "airConditioner": true,
@@ -188,30 +250,40 @@
       },
       "nearTheArea": [
         {
-          "name": "Gần khu vui chơi giải trí",
-          "mileage": 400
+          "name": "Ga Đà Lạt",
+          "mileage": 1320
         },
         {
-          "name": "Biển Mỹ Khê",
-          "mileage": 868
+          "name": "Xuan Huong Lake",
+          "mileage": 1600
         },
         {
-          "name": "Danang Cathedral",
+          "name": "Nhà thờ Domaine de Marie",
           "mileage": 2840
         }
       ],
-      "introduce": "Davue Hotel Da Nang là một khách sạn nằm trong khu vực an ninh, toạ lạc tại Mỹ An. Quầy tiếp tân 24 giờ luôn sẵn sàng phục vụ quý khách từ thủ tục nhận phòng đến trả phòng hay bất kỳ yêu cầu nào. Nếu cần giúp đỡ xin hãy liên hệ đội ngũ tiếp tân.",
-      "addressDetail": "57-59 Đỗ Bí, Mỹ An, Ngũ Hành Sơn, Hội An, Việt Nam, 55000"
+      "introduce": "Lưu trú tại The Luxe Hotel Dalat là một lựa chọn đúng đắn khi quý khách đến thăm Phường 3.Quầy tiếp tân 24 giờ luôn sẵn sàng phục vụ quý khách từ thủ tục nhận phòng đến trả phòng hay bất kỳ yêu cầu nào. Nếu cần giúp đỡ xin hãy liên hệ đội ngũ tiếp tân, chúng tôi luôn sẵn sàng hỗ trợ quý khách.Sóng WiFi phủ khắp các khu vực chung của khách sạn cho phép quý khách luôn kết nối với gia đình và bè bạn.",
+      "addressDetail": "17-17Bis 3/4 , Phường 3, Đà Lạt, Lâm Đồng, Việt Nam"
     },
     {
+      "isDelete": false,
       "id": 6,
-      "name": "DAVUE HOTEL",
-      "image": "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10038281-1228x921-FIT_AND_TRIM-96c5061e4e6b1a533574c8f5c6454d29.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640",
-      "priceOld": 1200,
-      "priceCurrent": 740,
-      "city": "Đà Nẵng",
-      "address": "140 Trưng nữ vương",
+      "name": "SOL by Melia",
+      "image": "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10020293-9925c6154ce30097d11ca78421c022c6.jpeg?_src=imagekit&tr=c-at_max,f-jpg,fo-auto,h-332,pr-true,q-100,w-480",
+      "priceOld": 3200000,
+      "priceCurrent": 1990000,
+      "city": "Phú Quốc",
+      "address": "Duc Viet Tourist Area",
       "rate": 4.5,
+      "imageList": [
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10020293-2578x1447-FIT_AND_TRIM-a00f7a790fdb44ab57537847f225d61c.jpeg?_src=imagekit&tr=c-at_max,f-jpg,fo-auto,h-162,pr-true,q-100,w-184",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10020293-2828x1886-FIT_AND_TRIM-93855ce2228f5265f6092ebb6784adaa.jpeg?_src=imagekit&tr=c-at_max,f-jpg,fo-auto,h-162,pr-true,q-100,w-184",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10020293-2163x1442-FIT_AND_TRIM-4eebe2035d7a5ff6a9e8358983d58038.jpeg?_src=imagekit&tr=c-at_max,f-jpg,fo-auto,h-162,pr-true,q-100,w-184",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10020293-2163x1442-FIT_AND_TRIM-4eebe2035d7a5ff6a9e8358983d58038.jpeg?_src=imagekit&tr=c-at_max,f-jpg,fo-auto,h-162,pr-true,q-100,w-184",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10020293-2163x1442-FIT_AND_TRIM-4eebe2035d7a5ff6a9e8358983d58038.jpeg?_src=imagekit&tr=c-at_max,f-jpg,fo-auto,h-162,pr-true,q-100,w-184",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10020293-2507x1672-FIT_AND_TRIM-7daecd1c913f71c0d1b35a2d01e53b9b.jpeg?_src=imagekit&tr=c-at_max,f-jpg,fo-auto,h-162,pr-true,q-100,w-184",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10020293-9312c1aa82d633b682d707fc25c866c4.jpeg?_src=imagekit&tr=c-at_max,f-jpg,fo-auto,h-162,pr-true,q-100,w-184"
+      ],
       "utilities": {
         "wifi": true,
         "airConditioner": true,
@@ -221,30 +293,41 @@
       },
       "nearTheArea": [
         {
-          "name": "Gần khu vui chơi giải trí",
-          "mileage": 400
+          "name": "Suối Tranh Waterfall",
+          "mileage": 2000
         },
         {
-          "name": "Biển Mỹ Khê",
-          "mileage": 868
+          "name": "Sân bay quốc tế Phú Quốc (PQC)",
+          "mileage": 2100
         },
         {
           "name": "Danang Cathedral",
           "mileage": 2840
         }
       ],
-      "introduce": "Davue Hotel Da Nang là một khách sạn nằm trong khu vực an ninh, toạ lạc tại Mỹ An. Quầy tiếp tân 24 giờ luôn sẵn sàng phục vụ quý khách từ thủ tục nhận phòng đến trả phòng hay bất kỳ yêu cầu nào. Nếu cần giúp đỡ xin hãy liên hệ đội ngũ tiếp tân.",
-      "addressDetail": "57-59 Đỗ Bí, Mỹ An, Ngũ Hành Sơn, Đà Nẵng, Việt Nam, 55000"
+      "introduce": "SOL by Melia Phu Quoc là một nơi nghỉ nằm trong khu vực an ninh, toạ lạc tại xã Dương Tơ.Quầy tiếp tân 24 giờ luôn sẵn sàng phục vụ quý khách từ thủ tục nhận phòng đến trả phòng hay bất kỳ yêu cầu nào. Nếu cần giúp đỡ xin hãy liên hệ đội ngũ tiếp tân, chúng tôi luôn sẵn sàng hỗ trợ quý khách.Sóng WiFi phủ khắp các khu vực chung của nơi nghỉ cho phép quý khách luôn kết nối với gia đình và bè bạn.",
+      "addressDetail": "Duc Viet Tourist Area, Zone 1, xã Dương Tơ, Phú Quốc, Kiên Giang, Việt Nam",
+      "updatedAt": 1718883961677
     },
     {
+      "isDelete": false,
       "id": 7,
-      "name": "DAVUE HOTEL",
-      "image": "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10038281-1228x921-FIT_AND_TRIM-96c5061e4e6b1a533574c8f5c6454d29.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640",
-      "priceOld": 1200,
-      "priceCurrent": 740,
+      "name": "Riva Hotel",
+      "image": "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20022759-bc1373995692f4946fc83333c506082b.jpeg?_src=imagekit&tr=c-at_max,f-jpg,fo-auto,h-332,pr-true,q-100,w-480",
+      "priceOld": 1500000,
+      "priceCurrent": 110000,
       "city": "Đà Nẵng",
-      "address": "140 Trưng nữ vương",
+      "address": "156 Hoàng Diệu",
       "rate": 4.5,
+      "imageList": [
+        "https://cdn3.ivivu.com/2014/01/SUPER-DELUXE2.jpg",
+        "https://cdn3.ivivu.com/2014/01/20762698_images1477905_6.jpg",
+        "https://cdn3.ivivu.com/2014/01/ztq1372403761.jpg",
+        "https://cdn3.ivivu.com/2014/01/Khach-san-Midtown-Hue-4-Sao-Lobby.jpg",
+        "https://cdn3.ivivu.com/2014/01/Business_Center_Saigon_Tower_2.jpg",
+        "https://ik.imagekit.io/tvlk/apr-asset/Ixf4aptF5N2Qdfmh4fGGYhTN274kJXuNMkUAzpL5HuD9jzSxIGG5kZNhhHY-p7nw/hotel/asset/20065178-7e324096cc976daee6aed2e527a1b853.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640",
+        "https://ik.imagekit.io/tvlk/apr-asset/Ixf4aptF5N2Qdfmh4fGGYhTN274kJXuNMkUAzpL5HuD9jzSxIGG5kZNhhHY-p7nw/hotel/asset/20065178-7e324096cc976daee6aed2e527a1b853.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640"
+      ],
       "utilities": {
         "wifi": true,
         "airConditioner": true,
@@ -270,14 +353,24 @@
       "addressDetail": "57-59 Đỗ Bí, Mỹ An, Ngũ Hành Sơn, Đà Nẵng, Việt Nam, 55000"
     },
     {
+      "isDelete": false,
       "id": 8,
-      "name": "DAVUE HOTEL",
-      "image": "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10038281-1228x921-FIT_AND_TRIM-96c5061e4e6b1a533574c8f5c6454d29.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640",
-      "priceOld": 1200,
-      "priceCurrent": 740,
+      "name": "Night Hotel",
+      "image": "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10027127-e69c81c8a936c5bde429c7e08f3784c2.jpeg?_src=imagekit&tr=c-at_max,f-jpg,fo-auto,h-332,pr-true,q-100,w-480",
+      "priceOld": 1200000,
+      "priceCurrent": 740000,
       "city": "Đà Nẵng",
-      "address": "140 Trưng nữ vương",
+      "address": "127 Tôn Đức Thắng",
       "rate": 4.5,
+      "imageList": [
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10027127-e69c81c8a936c5bde429c7e08f3784c2.jpeg?_src=imagekit&tr=c-at_max,f-jpg,fo-auto,h-332,pr-true,q-100,w-480",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10027127-210c12efb4b60d9063be43f259eaef2f.jpeg?_src=imagekit&tr=c-at_max,f-jpg,fo-auto,h-162,pr-true,q-100,w-184",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10027127-60a3a874225c552f32e653e40ab27ff5.jpeg?_src=imagekit&tr=c-at_max,f-jpg,fo-auto,h-162,pr-true,q-100,w-184",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10027127-60a3a874225c552f32e653e40ab27ff5.jpeg?_src=imagekit&tr=c-at_max,f-jpg,fo-auto,h-162,pr-true,q-100,w-184",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10027127-2bf0dec229e0de86b3b3a0ecc6395283.jpeg?_src=imagekit&tr=c-at_max,f-jpg,fo-auto,h-162,pr-true,q-100,w-184",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10027127-f9393b735466c20480c996507a02589e.jpeg?_src=imagekit&tr=c-at_max,f-jpg,fo-auto,h-72,pr-true,q-100,w-108",
+        "https://ik.imagekit.io/tvlk/apr-asset/Ixf4aptF5N2Qdfmh4fGGYhTN274kJXuNMkUAzpL5HuD9jzSxIGG5kZNhhHY-p7nw/hotel/asset/20065178-7e324096cc976daee6aed2e527a1b853.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640"
+      ],
       "utilities": {
         "wifi": true,
         "airConditioner": true,
@@ -303,14 +396,24 @@
       "addressDetail": "57-59 Đỗ Bí, Mỹ An, Ngũ Hành Sơn, Đà Nẵng, Việt Nam, 55000"
     },
     {
+      "isDelete": false,
       "id": 9,
       "name": "DAVUE HOTEL",
       "image": "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10038281-1228x921-FIT_AND_TRIM-96c5061e4e6b1a533574c8f5c6454d29.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640",
-      "priceOld": 1200,
-      "priceCurrent": 740,
+      "priceOld": 1200000,
+      "priceCurrent": 740000,
       "city": "Đà Nẵng",
       "address": "140 Trưng nữ vương",
       "rate": 4.5,
+      "imageList": [
+        "https://cdn3.ivivu.com/2014/01/SUPER-DELUXE2.jpg",
+        "https://cdn3.ivivu.com/2014/01/20762698_images1477905_6.jpg",
+        "https://cdn3.ivivu.com/2014/01/ztq1372403761.jpg",
+        "https://cdn3.ivivu.com/2014/01/Khach-san-Midtown-Hue-4-Sao-Lobby.jpg",
+        "https://cdn3.ivivu.com/2014/01/Business_Center_Saigon_Tower_2.jpg",
+        "https://ik.imagekit.io/tvlk/apr-asset/Ixf4aptF5N2Qdfmh4fGGYhTN274kJXuNMkUAzpL5HuD9jzSxIGG5kZNhhHY-p7nw/hotel/asset/20065178-7e324096cc976daee6aed2e527a1b853.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640",
+        "https://ik.imagekit.io/tvlk/apr-asset/Ixf4aptF5N2Qdfmh4fGGYhTN274kJXuNMkUAzpL5HuD9jzSxIGG5kZNhhHY-p7nw/hotel/asset/20065178-7e324096cc976daee6aed2e527a1b853.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640"
+      ],
       "utilities": {
         "wifi": true,
         "airConditioner": true,
@@ -334,134 +437,994 @@
       ],
       "introduce": "Davue Hotel Da Nang là một khách sạn nằm trong khu vực an ninh, toạ lạc tại Mỹ An. Quầy tiếp tân 24 giờ luôn sẵn sàng phục vụ quý khách từ thủ tục nhận phòng đến trả phòng hay bất kỳ yêu cầu nào. Nếu cần giúp đỡ xin hãy liên hệ đội ngũ tiếp tân.",
       "addressDetail": "57-59 Đỗ Bí, Mỹ An, Ngũ Hành Sơn, Đà Nẵng, Việt Nam, 55000"
+    },
+    {
+      "name": "Sun City Hotel",
+      "priceOld": 1200000,
+      "priceCurrent": 950000,
+      "city": "Nha Trang",
+      "address": "18 Tôn Đản",
+      "addressDetail": "18 Tôn Đản, Lộc Thọ, Nha Trang, Khánh Hòa, Việt Nam",
+      "introduce": "Sun City Hotel Nha Trang toạ lạc tại khu vực / Lộc Thọ.   Quầy tiếp tân 24 giờ luôn sẵn sàng phục vụ quý khách từ thủ tục nhận phòng đến trả phòng hay bất kỳ yêu cầu nào. Nếu cần giúp đỡ xin hãy liên hệ đội ngũ tiếp tân, chúng tôi luôn sẵn sàng hỗ trợ quý khách. Sóng WiFi phủ khắp các khu vực chung của khách sạn cho phép quý khách luôn kết nối với gia đình và bè bạn.",
+      "nearTheArea": [
+        {
+          "name": "Bến phà Vinpearl",
+          "mileage": 2400
+        },
+        {
+          "name": "Chợ Đầm",
+          "mileage": 1880
+        },
+        {
+          "name": "Nhà thờ Núi Nha Trang",
+          "mileage": 1320
+        }
+      ],
+      "numberMeter": 2400,
+      "utilities": {
+        "wifi": true,
+        "airConditioner": true,
+        "restaurant": true,
+        "receptionist": true,
+        "parkingLot": true
+      },
+      "rate": 4.5,
+      "image": "https://firebasestorage.googleapis.com/v0/b/bookhotel-60f63.appspot.com/o/files%2Fb0d41e21-0129-49b7-af34-b75d2e1de516?alt=media&token=0bb6c372-ad83-422c-82be-1e0d66706775",
+      "imageList": [
+        "https://firebasestorage.googleapis.com/v0/b/bookhotel-60f63.appspot.com/o/files%2Fec432f31-03e1-4758-9d72-15c978696655?alt=media&token=a5f5e151-e360-4263-90e3-d5166b90477a",
+        "https://firebasestorage.googleapis.com/v0/b/bookhotel-60f63.appspot.com/o/files%2F64ee8ddd-b572-427f-bdc0-92c83459a961?alt=media&token=bf95ef5f-1689-4e92-8f79-e7cf6626c77b",
+        "https://firebasestorage.googleapis.com/v0/b/bookhotel-60f63.appspot.com/o/files%2F8f253a1b-f45f-4a9b-9179-63363746626d?alt=media&token=36586c6c-3930-4b1d-bf3e-31e843720de6",
+        "https://firebasestorage.googleapis.com/v0/b/bookhotel-60f63.appspot.com/o/files%2F4357eaef-6191-44a3-9836-505097dd26f4?alt=media&token=101533ab-ad04-4302-bfe3-3188209900a9",
+        "https://firebasestorage.googleapis.com/v0/b/bookhotel-60f63.appspot.com/o/files%2Fa62cb48f-d492-4b66-b92b-1c81e76d4592?alt=media&token=444c0bb7-ad0a-4a8e-a54a-eb47bf122f9a",
+        "https://firebasestorage.googleapis.com/v0/b/bookhotel-60f63.appspot.com/o/files%2F7b23b86f-8dae-4578-8435-29ed9929f29d?alt=media&token=3348c723-bdac-45e3-acac-64b2bf88b364"
+      ],
+      "createdAt": 1718799880187,
+      "updatedAt": 1718799880187,
+      "isDelete": false,
+      "id": 11
     }
   ],
-  "images": [
+  "rooms": [
     {
+      "isDelete": false,
+      "id": 1,
+      "name": "Phòng 101",
       "hotelId": 1,
       "imageList": [
-        "https://cdn3.ivivu.com/2014/01/SUPER-DELUXE2.jpg",
-        "https://cdn3.ivivu.com/2014/01/20762698_images1477905_6.jpg",
-        "https://cdn3.ivivu.com/2014/01/ztq1372403761.jpg",
-        "https://cdn3.ivivu.com/2014/01/Khach-san-Midtown-Hue-4-Sao-Lobby.jpg",
-        "https://cdn3.ivivu.com/2014/01/Business_Center_Saigon_Tower_2.jpg",
-        "https://ik.imagekit.io/tvlk/apr-asset/Ixf4aptF5N2Qdfmh4fGGYhTN274kJXuNMkUAzpL5HuD9jzSxIGG5kZNhhHY-p7nw/hotel/asset/20065178-7e324096cc976daee6aed2e527a1b853.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640",
-        "https://ik.imagekit.io/tvlk/apr-asset/Ixf4aptF5N2Qdfmh4fGGYhTN274kJXuNMkUAzpL5HuD9jzSxIGG5kZNhhHY-p7nw/hotel/asset/20065178-7e324096cc976daee6aed2e527a1b853.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640"
-      ]
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/d1aec008_z.jpg?_src=imagekit&tr=h-100,q-40,w-100",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/31d02a62_z.jpg?_src=imagekit&tr=h-100,q-40,w-100",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/437f4e62_z.jpg?_src=imagekit&tr=c-at_max,h-460,q-40,w-724",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/8edea6a3_z.jpg?_src=imagekit&tr=c-at_max,h-460,q-40,w-724",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/c2409def_z.jpg?_src=imagekit&tr=h-100,q-40,w-100",
+        "https://firebasestorage.googleapis.com/v0/b/bookhotel-60f63.appspot.com/o/files%2Fc9f12895-0a75-4131-9b87-e0f8b525a15d?alt=media&token=7db6efca-5612-461f-a63e-0357d4638bf3"
+      ],
+      "ListOfBookedRooms": [
+        {
+          "userId": 4,
+          "checkInDate": "2024-08-10",
+          "checkOutDate": "2024-10-30"
+        },
+        {
+          "userId": 4,
+          "checkInDate": "2024-06-30",
+          "checkOutDate": "2024-07-05"
+        },
+        {
+          "userId": 4,
+          "checkInDate": "2024-06-21",
+          "checkOutDate": "2024-06-25"
+        },
+        {
+          "userId": 4,
+          "checkInDate": "2024-06-14",
+          "checkOutDate": "2024-06-20"
+        }
+      ],
+      "utilities": {
+        "wifi": false,
+        "airConditioner": false,
+        "restaurant": false,
+        "receptionist": false,
+        "parkingLot": false
+      },
+      "sizeRoom": 20,
+      "user": 2,
+      "heading": "Superior Double",
+      "floor": 4,
+      "price": 800000,
+      "updatedAt": 1719925098562,
+      "shower": true,
+      "TV": true,
+      "phone": true,
+      "water": true
     },
     {
+      "isDelete": false,
+      "id": 2,
+      "name": "Phòng 102",
+      "hotelId": 1,
+      "imageList": [
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/d1aec008_z.jpg?_src=imagekit&tr=h-100,q-40,w-100",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/31d02a62_z.jpg?_src=imagekit&tr=h-100,q-40,w-100",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/437f4e62_z.jpg?_src=imagekit&tr=c-at_max,h-460,q-40,w-724",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/8edea6a3_z.jpg?_src=imagekit&tr=c-at_max,h-460,q-40,w-724",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/c2409def_z.jpg?_src=imagekit&tr=h-100,q-40,w-100"
+      ],
+      "ListOfBookedRooms": [
+        {
+          "userId": 4,
+          "checkInDate": "2024-07-05",
+          "checkOutDate": "2024-07-10"
+        },
+        {
+          "userId": 4,
+          "checkInDate": "2024-07-20",
+          "checkOutDate": "2024-07-27"
+        },
+        {
+          "userId": 4,
+          "checkInDate": "2024-06-30",
+          "checkOutDate": "2024-07-02"
+        },
+        {
+          "userId": 4,
+          "checkInDate": "2024-06-14",
+          "checkOutDate": "2024-06-16"
+        }
+      ],
+      "utilities": {
+        "shower": true,
+        "TV": true,
+        "phone": true,
+        "water": false
+      },
+      "sizeRoom": 23,
+      "user": 1,
+      "heading": "Superior Double",
+      "floor": 6,
+      "price": 740000,
+      "updatedAt": 1720077217430
+    },
+    {
+      "isDelete": false,
+      "id": 3,
+      "name": "Phòng 101",
       "hotelId": 2,
       "imageList": [
-        "https://cdn3.ivivu.com/2014/01/SUPER-DELUXE2.jpg",
-        "https://cdn3.ivivu.com/2014/01/20762698_images1477905_6.jpg",
-        "https://cdn3.ivivu.com/2014/01/ztq1372403761.jpg",
-        "https://cdn3.ivivu.com/2014/01/Khach-san-Midtown-Hue-4-Sao-Lobby.jpg",
-        "https://cdn3.ivivu.com/2014/01/Business_Center_Saigon_Tower_2.jpg",
-        "https://ik.imagekit.io/tvlk/apr-asset/Ixf4aptF5N2Qdfmh4fGGYhTN274kJXuNMkUAzpL5HuD9jzSxIGG5kZNhhHY-p7nw/hotel/asset/20065178-7e324096cc976daee6aed2e527a1b853.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640",
-        "https://ik.imagekit.io/tvlk/apr-asset/Ixf4aptF5N2Qdfmh4fGGYhTN274kJXuNMkUAzpL5HuD9jzSxIGG5kZNhhHY-p7nw/hotel/asset/20065178-7e324096cc976daee6aed2e527a1b853.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640"
-      ]
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/d1aec008_z.jpg?_src=imagekit&tr=h-100,q-40,w-100",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/31d02a62_z.jpg?_src=imagekit&tr=h-100,q-40,w-100",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/437f4e62_z.jpg?_src=imagekit&tr=c-at_max,h-460,q-40,w-724",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/8edea6a3_z.jpg?_src=imagekit&tr=c-at_max,h-460,q-40,w-724",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/c2409def_z.jpg?_src=imagekit&tr=h-100,q-40,w-100"
+      ],
+      "ListOfBookedRooms": [
+        {
+          "userId": 3,
+          "checkInDate": "2024-06-14",
+          "checkOutDate": "2024-06-16"
+        }
+      ],
+      "utilities": {
+        "shower": true,
+        "TV": true,
+        "phone": true,
+        "water": true
+      },
+      "sizeRoom": 20,
+      "user": 2,
+      "heading": "Superior Double",
+      "floor": 4,
+      "price": 780000
     },
     {
+      "isDelete": false,
+      "id": 4,
+      "name": "Phòng 102",
+      "hotelId": 2,
+      "imageList": [
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/d1aec008_z.jpg?_src=imagekit&tr=h-100,q-40,w-100",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/31d02a62_z.jpg?_src=imagekit&tr=h-100,q-40,w-100",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/437f4e62_z.jpg?_src=imagekit&tr=c-at_max,h-460,q-40,w-724",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/8edea6a3_z.jpg?_src=imagekit&tr=c-at_max,h-460,q-40,w-724",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/c2409def_z.jpg?_src=imagekit&tr=h-100,q-40,w-100"
+      ],
+      "ListOfBookedRooms": [],
+      "utilities": {
+        "shower": true,
+        "TV": true,
+        "phone": true,
+        "water": false
+      },
+      "sizeRoom": 23,
+      "user": 1,
+      "heading": "Superior Double",
+      "floor": 6,
+      "price": 740000
+    },
+    {
+      "isDelete": false,
+      "id": 5,
+      "name": "Phòng 101",
       "hotelId": 3,
       "imageList": [
-        "https://cdn3.ivivu.com/2014/01/SUPER-DELUXE2.jpg",
-        "https://cdn3.ivivu.com/2014/01/20762698_images1477905_6.jpg",
-        "https://cdn3.ivivu.com/2014/01/ztq1372403761.jpg",
-        "https://cdn3.ivivu.com/2014/01/Khach-san-Midtown-Hue-4-Sao-Lobby.jpg",
-        "https://cdn3.ivivu.com/2014/01/Business_Center_Saigon_Tower_2.jpg",
-        "https://ik.imagekit.io/tvlk/apr-asset/Ixf4aptF5N2Qdfmh4fGGYhTN274kJXuNMkUAzpL5HuD9jzSxIGG5kZNhhHY-p7nw/hotel/asset/20065178-7e324096cc976daee6aed2e527a1b853.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640",
-        "https://ik.imagekit.io/tvlk/apr-asset/Ixf4aptF5N2Qdfmh4fGGYhTN274kJXuNMkUAzpL5HuD9jzSxIGG5kZNhhHY-p7nw/hotel/asset/20065178-7e324096cc976daee6aed2e527a1b853.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640"
-      ]
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/d1aec008_z.jpg?_src=imagekit&tr=h-100,q-40,w-100",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/31d02a62_z.jpg?_src=imagekit&tr=h-100,q-40,w-100",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/437f4e62_z.jpg?_src=imagekit&tr=c-at_max,h-460,q-40,w-724",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/8edea6a3_z.jpg?_src=imagekit&tr=c-at_max,h-460,q-40,w-724",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/c2409def_z.jpg?_src=imagekit&tr=h-100,q-40,w-100"
+      ],
+      "ListOfBookedRooms": [
+        {
+          "checkInDate": "2024-06-15",
+          "checkOutDate": "2024-06-20"
+        }
+      ],
+      "utilities": {
+        "shower": true,
+        "TV": true,
+        "phone": true,
+        "water": true
+      },
+      "sizeRoom": 20,
+      "user": 2,
+      "heading": "Superior Double",
+      "floor": 4,
+      "price": 780000,
+      "updatedAt": 1718358490741
     },
     {
-      "hotelId": 4,
+      "isDelete": false,
+      "id": 6,
+      "name": "Phòng 102",
+      "hotelId": 3,
       "imageList": [
-        "https://cdn3.ivivu.com/2014/01/SUPER-DELUXE2.jpg",
-        "https://cdn3.ivivu.com/2014/01/20762698_images1477905_6.jpg",
-        "https://cdn3.ivivu.com/2014/01/ztq1372403761.jpg",
-        "https://cdn3.ivivu.com/2014/01/Khach-san-Midtown-Hue-4-Sao-Lobby.jpg",
-        "https://cdn3.ivivu.com/2014/01/Business_Center_Saigon_Tower_2.jpg",
-        "https://ik.imagekit.io/tvlk/apr-asset/Ixf4aptF5N2Qdfmh4fGGYhTN274kJXuNMkUAzpL5HuD9jzSxIGG5kZNhhHY-p7nw/hotel/asset/20065178-7e324096cc976daee6aed2e527a1b853.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640",
-        "https://ik.imagekit.io/tvlk/apr-asset/Ixf4aptF5N2Qdfmh4fGGYhTN274kJXuNMkUAzpL5HuD9jzSxIGG5kZNhhHY-p7nw/hotel/asset/20065178-7e324096cc976daee6aed2e527a1b853.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640"
-      ]
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/d1aec008_z.jpg?_src=imagekit&tr=h-100,q-40,w-100",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/31d02a62_z.jpg?_src=imagekit&tr=h-100,q-40,w-100",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/437f4e62_z.jpg?_src=imagekit&tr=c-at_max,h-460,q-40,w-724",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/8edea6a3_z.jpg?_src=imagekit&tr=c-at_max,h-460,q-40,w-724",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/c2409def_z.jpg?_src=imagekit&tr=h-100,q-40,w-100"
+      ],
+      "ListOfBookedRooms": [
+        {
+          "userId": 4,
+          "checkInDate": "2024-06-18",
+          "checkOutDate": "2024-06-30"
+        }
+      ],
+      "utilities": {
+        "shower": true,
+        "TV": true,
+        "phone": true,
+        "water": false
+      },
+      "sizeRoom": 23,
+      "user": 1,
+      "heading": "Superior Double",
+      "floor": 6,
+      "price": 740000,
+      "updatedAt": 1718600418128
     },
     {
+      "isDelete": false,
+      "id": 10,
+      "name": "Phòng 101",
       "hotelId": 5,
       "imageList": [
-        "https://cdn3.ivivu.com/2014/01/SUPER-DELUXE2.jpg",
-        "https://cdn3.ivivu.com/2014/01/20762698_images1477905_6.jpg",
-        "https://cdn3.ivivu.com/2014/01/ztq1372403761.jpg",
-        "https://cdn3.ivivu.com/2014/01/Khach-san-Midtown-Hue-4-Sao-Lobby.jpg",
-        "https://cdn3.ivivu.com/2014/01/Business_Center_Saigon_Tower_2.jpg",
-        "https://ik.imagekit.io/tvlk/apr-asset/Ixf4aptF5N2Qdfmh4fGGYhTN274kJXuNMkUAzpL5HuD9jzSxIGG5kZNhhHY-p7nw/hotel/asset/20065178-7e324096cc976daee6aed2e527a1b853.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640",
-        "https://ik.imagekit.io/tvlk/apr-asset/Ixf4aptF5N2Qdfmh4fGGYhTN274kJXuNMkUAzpL5HuD9jzSxIGG5kZNhhHY-p7nw/hotel/asset/20065178-7e324096cc976daee6aed2e527a1b853.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640"
-      ]
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/d1aec008_z.jpg?_src=imagekit&tr=h-100,q-40,w-100",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/31d02a62_z.jpg?_src=imagekit&tr=h-100,q-40,w-100",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/437f4e62_z.jpg?_src=imagekit&tr=c-at_max,h-460,q-40,w-724",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/8edea6a3_z.jpg?_src=imagekit&tr=c-at_max,h-460,q-40,w-724",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/c2409def_z.jpg?_src=imagekit&tr=h-100,q-40,w-100"
+      ],
+      "ListOfBookedRooms": [
+        {
+          "userId": 4,
+          "checkInDate": "2024-10-20",
+          "checkOutDate": "2024-10-21"
+        }
+      ],
+      "utilities": {
+        "shower": true,
+        "TV": true,
+        "phone": true,
+        "water": true
+      },
+      "sizeRoom": 20,
+      "user": 2,
+      "heading": "Superior Double",
+      "floor": 4,
+      "price": 780000,
+      "updatedAt": 1718601441670
     },
     {
+      "isDelete": false,
+      "id": 7,
+      "name": "Phòng 102",
+      "hotelId": 4,
+      "imageList": [
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/d1aec008_z.jpg?_src=imagekit&tr=h-100,q-40,w-100",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/31d02a62_z.jpg?_src=imagekit&tr=h-100,q-40,w-100",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/437f4e62_z.jpg?_src=imagekit&tr=c-at_max,h-460,q-40,w-724",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/8edea6a3_z.jpg?_src=imagekit&tr=c-at_max,h-460,q-40,w-724",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/c2409def_z.jpg?_src=imagekit&tr=h-100,q-40,w-100"
+      ],
+      "ListOfBookedRooms": [
+        {
+          "userId": 4,
+          "checkInDate": "2024-07-19",
+          "checkOutDate": "2024-07-30"
+        }
+      ],
+      "utilities": {
+        "shower": true,
+        "TV": true,
+        "phone": true,
+        "water": false
+      },
+      "sizeRoom": 23,
+      "user": 1,
+      "heading": "Superior Double",
+      "floor": 6,
+      "price": 740000,
+      "updatedAt": 1718601031832
+    },
+    {
+      "isDelete": false,
+      "id": 8,
+      "name": "Phòng 101",
+      "hotelId": 4,
+      "imageList": [
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/d1aec008_z.jpg?_src=imagekit&tr=h-100,q-40,w-100",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/31d02a62_z.jpg?_src=imagekit&tr=h-100,q-40,w-100",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/437f4e62_z.jpg?_src=imagekit&tr=c-at_max,h-460,q-40,w-724",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/8edea6a3_z.jpg?_src=imagekit&tr=c-at_max,h-460,q-40,w-724",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/c2409def_z.jpg?_src=imagekit&tr=h-100,q-40,w-100"
+      ],
+      "ListOfBookedRooms": [],
+      "utilities": {
+        "shower": true,
+        "TV": true,
+        "phone": true,
+        "water": true
+      },
+      "sizeRoom": 20,
+      "user": 2,
+      "heading": "Superior Double",
+      "floor": 4,
+      "price": 780000
+    },
+    {
+      "isDelete": false,
+      "id": 9,
+      "name": "Phòng 102",
+      "hotelId": 5,
+      "imageList": [
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/d1aec008_z.jpg?_src=imagekit&tr=h-100,q-40,w-100",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/31d02a62_z.jpg?_src=imagekit&tr=h-100,q-40,w-100",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/437f4e62_z.jpg?_src=imagekit&tr=c-at_max,h-460,q-40,w-724",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/8edea6a3_z.jpg?_src=imagekit&tr=c-at_max,h-460,q-40,w-724",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/c2409def_z.jpg?_src=imagekit&tr=h-100,q-40,w-100"
+      ],
+      "ListOfBookedRooms": [],
+      "utilities": {
+        "shower": true,
+        "TV": true,
+        "phone": true,
+        "water": false
+      },
+      "sizeRoom": 23,
+      "user": 1,
+      "heading": "Superior Double",
+      "floor": 6,
+      "price": 740000
+    },
+    {
+      "isDelete": false,
+      "id": 11,
+      "name": "Phòng 101",
       "hotelId": 6,
       "imageList": [
-        "https://cdn3.ivivu.com/2014/01/SUPER-DELUXE2.jpg",
-        "https://cdn3.ivivu.com/2014/01/20762698_images1477905_6.jpg",
-        "https://cdn3.ivivu.com/2014/01/ztq1372403761.jpg",
-        "https://cdn3.ivivu.com/2014/01/Khach-san-Midtown-Hue-4-Sao-Lobby.jpg",
-        "https://cdn3.ivivu.com/2014/01/Business_Center_Saigon_Tower_2.jpg",
-        "https://ik.imagekit.io/tvlk/apr-asset/Ixf4aptF5N2Qdfmh4fGGYhTN274kJXuNMkUAzpL5HuD9jzSxIGG5kZNhhHY-p7nw/hotel/asset/20065178-7e324096cc976daee6aed2e527a1b853.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640",
-        "https://ik.imagekit.io/tvlk/apr-asset/Ixf4aptF5N2Qdfmh4fGGYhTN274kJXuNMkUAzpL5HuD9jzSxIGG5kZNhhHY-p7nw/hotel/asset/20065178-7e324096cc976daee6aed2e527a1b853.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640"
-      ]
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/d1aec008_z.jpg?_src=imagekit&tr=h-100,q-40,w-100",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/31d02a62_z.jpg?_src=imagekit&tr=h-100,q-40,w-100",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/437f4e62_z.jpg?_src=imagekit&tr=c-at_max,h-460,q-40,w-724",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/8edea6a3_z.jpg?_src=imagekit&tr=c-at_max,h-460,q-40,w-724",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/c2409def_z.jpg?_src=imagekit&tr=h-100,q-40,w-100"
+      ],
+      "ListOfBookedRooms": [],
+      "utilities": {
+        "shower": true,
+        "TV": true,
+        "phone": true,
+        "water": true
+      },
+      "sizeRoom": 20,
+      "user": 2,
+      "heading": "Superior Double",
+      "floor": 4,
+      "price": 780000
     },
     {
+      "isDelete": false,
+      "id": 12,
+      "name": "Phòng 102",
+      "hotelId": 6,
+      "imageList": [
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/d1aec008_z.jpg?_src=imagekit&tr=h-100,q-40,w-100",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/31d02a62_z.jpg?_src=imagekit&tr=h-100,q-40,w-100",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/437f4e62_z.jpg?_src=imagekit&tr=c-at_max,h-460,q-40,w-724",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/8edea6a3_z.jpg?_src=imagekit&tr=c-at_max,h-460,q-40,w-724",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/c2409def_z.jpg?_src=imagekit&tr=h-100,q-40,w-100"
+      ],
+      "ListOfBookedRooms": [],
+      "utilities": {
+        "shower": true,
+        "TV": true,
+        "phone": true,
+        "water": false
+      },
+      "sizeRoom": 23,
+      "user": 1,
+      "heading": "Superior Double",
+      "floor": 6,
+      "price": 740000
+    },
+    {
+      "isDelete": false,
+      "id": 13,
+      "name": "Phòng 101",
       "hotelId": 7,
       "imageList": [
-        "https://cdn3.ivivu.com/2014/01/SUPER-DELUXE2.jpg",
-        "https://cdn3.ivivu.com/2014/01/20762698_images1477905_6.jpg",
-        "https://cdn3.ivivu.com/2014/01/ztq1372403761.jpg",
-        "https://cdn3.ivivu.com/2014/01/Khach-san-Midtown-Hue-4-Sao-Lobby.jpg",
-        "https://cdn3.ivivu.com/2014/01/Business_Center_Saigon_Tower_2.jpg",
-        "https://ik.imagekit.io/tvlk/apr-asset/Ixf4aptF5N2Qdfmh4fGGYhTN274kJXuNMkUAzpL5HuD9jzSxIGG5kZNhhHY-p7nw/hotel/asset/20065178-7e324096cc976daee6aed2e527a1b853.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640",
-        "https://ik.imagekit.io/tvlk/apr-asset/Ixf4aptF5N2Qdfmh4fGGYhTN274kJXuNMkUAzpL5HuD9jzSxIGG5kZNhhHY-p7nw/hotel/asset/20065178-7e324096cc976daee6aed2e527a1b853.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640"
-      ]
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/d1aec008_z.jpg?_src=imagekit&tr=h-100,q-40,w-100",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/31d02a62_z.jpg?_src=imagekit&tr=h-100,q-40,w-100",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/437f4e62_z.jpg?_src=imagekit&tr=c-at_max,h-460,q-40,w-724",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/8edea6a3_z.jpg?_src=imagekit&tr=c-at_max,h-460,q-40,w-724",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/c2409def_z.jpg?_src=imagekit&tr=h-100,q-40,w-100"
+      ],
+      "ListOfBookedRooms": [],
+      "utilities": {
+        "shower": true,
+        "TV": true,
+        "phone": true,
+        "water": true
+      },
+      "sizeRoom": 20,
+      "user": 2,
+      "heading": "Superior Double",
+      "floor": 4,
+      "price": 780000
     },
     {
+      "isDelete": false,
+      "id": 14,
+      "name": "Phòng 102",
+      "hotelId": 7,
+      "imageList": [
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/d1aec008_z.jpg?_src=imagekit&tr=h-100,q-40,w-100",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/31d02a62_z.jpg?_src=imagekit&tr=h-100,q-40,w-100",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/437f4e62_z.jpg?_src=imagekit&tr=c-at_max,h-460,q-40,w-724",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/8edea6a3_z.jpg?_src=imagekit&tr=c-at_max,h-460,q-40,w-724",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/c2409def_z.jpg?_src=imagekit&tr=h-100,q-40,w-100"
+      ],
+      "ListOfBookedRooms": [
+        {
+          "userId": 4,
+          "checkInDate": "2024-06-20",
+          "checkOutDate": "2024-06-30"
+        }
+      ],
+      "utilities": {
+        "shower": true,
+        "TV": true,
+        "phone": true,
+        "water": false
+      },
+      "sizeRoom": 23,
+      "user": 1,
+      "heading": "Superior Double",
+      "floor": 6,
+      "price": 740000,
+      "updatedAt": 1718601369609
+    },
+    {
+      "isDelete": false,
+      "id": 15,
+      "name": "Phòng 101",
       "hotelId": 8,
       "imageList": [
-        "https://cdn3.ivivu.com/2014/01/SUPER-DELUXE2.jpg",
-        "https://cdn3.ivivu.com/2014/01/20762698_images1477905_6.jpg",
-        "https://cdn3.ivivu.com/2014/01/ztq1372403761.jpg",
-        "https://cdn3.ivivu.com/2014/01/Khach-san-Midtown-Hue-4-Sao-Lobby.jpg",
-        "https://cdn3.ivivu.com/2014/01/Business_Center_Saigon_Tower_2.jpg",
-        "https://ik.imagekit.io/tvlk/apr-asset/Ixf4aptF5N2Qdfmh4fGGYhTN274kJXuNMkUAzpL5HuD9jzSxIGG5kZNhhHY-p7nw/hotel/asset/20065178-7e324096cc976daee6aed2e527a1b853.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640",
-        "https://ik.imagekit.io/tvlk/apr-asset/Ixf4aptF5N2Qdfmh4fGGYhTN274kJXuNMkUAzpL5HuD9jzSxIGG5kZNhhHY-p7nw/hotel/asset/20065178-7e324096cc976daee6aed2e527a1b853.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640"
-      ]
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/d1aec008_z.jpg?_src=imagekit&tr=h-100,q-40,w-100",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/31d02a62_z.jpg?_src=imagekit&tr=h-100,q-40,w-100",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/437f4e62_z.jpg?_src=imagekit&tr=c-at_max,h-460,q-40,w-724",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/8edea6a3_z.jpg?_src=imagekit&tr=c-at_max,h-460,q-40,w-724",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/c2409def_z.jpg?_src=imagekit&tr=h-100,q-40,w-100"
+      ],
+      "ListOfBookedRooms": [
+        {
+          "checkInDate": "2024-06-19",
+          "checkOutDate": "2024-07-22"
+        }
+      ],
+      "utilities": {
+        "shower": true,
+        "TV": true,
+        "phone": true,
+        "water": true
+      },
+      "sizeRoom": 20,
+      "user": 2,
+      "heading": "Superior Double",
+      "floor": 4,
+      "price": 780000,
+      "updatedAt": 1718601156073
+    },
+    {
+      "isDelete": false,
+      "id": 16,
+      "name": "Phòng 102",
+      "hotelId": 8,
+      "imageList": [
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/d1aec008_z.jpg?_src=imagekit&tr=h-100,q-40,w-100",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/31d02a62_z.jpg?_src=imagekit&tr=h-100,q-40,w-100",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/437f4e62_z.jpg?_src=imagekit&tr=c-at_max,h-460,q-40,w-724",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/8edea6a3_z.jpg?_src=imagekit&tr=c-at_max,h-460,q-40,w-724",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/c2409def_z.jpg?_src=imagekit&tr=h-100,q-40,w-100"
+      ],
+      "ListOfBookedRooms": [],
+      "utilities": {
+        "shower": true,
+        "TV": true,
+        "phone": true,
+        "water": false
+      },
+      "sizeRoom": 23,
+      "user": 1,
+      "heading": "Superior Double",
+      "floor": 6,
+      "price": 740000
+    },
+    {
+      "isDelete": false,
+      "id": 17,
+      "name": "Phòng 101",
+      "hotelId": 9,
+      "imageList": [
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/d1aec008_z.jpg?_src=imagekit&tr=h-100,q-40,w-100",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/31d02a62_z.jpg?_src=imagekit&tr=h-100,q-40,w-100",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/437f4e62_z.jpg?_src=imagekit&tr=c-at_max,h-460,q-40,w-724",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/8edea6a3_z.jpg?_src=imagekit&tr=c-at_max,h-460,q-40,w-724",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/c2409def_z.jpg?_src=imagekit&tr=h-100,q-40,w-100"
+      ],
+      "ListOfBookedRooms": [],
+      "utilities": {
+        "shower": true,
+        "TV": true,
+        "phone": true,
+        "water": true
+      },
+      "sizeRoom": 20,
+      "user": 2,
+      "heading": "Superior Double",
+      "floor": 4,
+      "price": 780000
+    },
+    {
+      "isDelete": false,
+      "id": 18,
+      "name": "Phòng 102",
+      "hotelId": 9,
+      "imageList": [
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/d1aec008_z.jpg?_src=imagekit&tr=h-100,q-40,w-100",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/31d02a62_z.jpg?_src=imagekit&tr=h-100,q-40,w-100",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/437f4e62_z.jpg?_src=imagekit&tr=c-at_max,h-460,q-40,w-724",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/8edea6a3_z.jpg?_src=imagekit&tr=c-at_max,h-460,q-40,w-724",
+        "https://ik.imagekit.io/tvlk/generic-asset/TzEv3ZUmG4-4Dz22hvmO9NUDzw1DGCIdWl4oPtKumOg=/lodging/36000000/35860000/35853400/35853355/c2409def_z.jpg?_src=imagekit&tr=h-100,q-40,w-100"
+      ],
+      "ListOfBookedRooms": [],
+      "utilities": {
+        "shower": true,
+        "TV": true,
+        "phone": true,
+        "water": false
+      },
+      "sizeRoom": 23,
+      "user": 1,
+      "heading": "Superior Double",
+      "floor": 6,
+      "price": 740000
+    },
+    {
+      "hotelId": 1,
+      "name": "Phòng 103",
+      "sizeRoom": 15,
+      "user": 2,
+      "heading": "GIƯỜNG ĐÔI",
+      "floor": 6,
+      "price": 920000,
+      "utilities": {
+        "shower": true,
+        "TV": true,
+        "phone": true,
+        "water": true
+      },
+      "imageList": [
+        "https://firebasestorage.googleapis.com/v0/b/bookhotel-60f63.appspot.com/o/files%2Fefd653d3-5a11-4947-a45d-4aeb1fe4dadd?alt=media&token=339afdc4-fd68-432e-8897-449848a0be65",
+        "https://firebasestorage.googleapis.com/v0/b/bookhotel-60f63.appspot.com/o/files%2F1dac3a4a-2aff-40b5-a740-e3062da2b456?alt=media&token=edd7b2a1-a2a9-43cb-b613-1cbeac53385c",
+        "https://firebasestorage.googleapis.com/v0/b/bookhotel-60f63.appspot.com/o/files%2Fa4a51845-6994-4ff3-82dc-ac1e8e5f5871?alt=media&token=c9d009bd-2701-40d3-80bf-68d7e6d15e77",
+        "https://firebasestorage.googleapis.com/v0/b/bookhotel-60f63.appspot.com/o/files%2Fe480a499-a24f-46c0-b85f-b15f0f7bee5d?alt=media&token=daf50515-e11f-4f61-a699-4e142397ec98",
+        "https://firebasestorage.googleapis.com/v0/b/bookhotel-60f63.appspot.com/o/files%2F308d7749-3214-4c4d-b3be-2115878da9ef?alt=media&token=07263fb4-b90c-4ae1-993d-76dae8af2281",
+        "https://firebasestorage.googleapis.com/v0/b/bookhotel-60f63.appspot.com/o/files%2F96fca50d-8fd3-425a-9e22-46f439b31e1e?alt=media&token=4e8ed9c3-065b-42ec-b423-f048e06d2734"
+      ],
+      "ListOfBookedRooms": [],
+      "createdAt": 1718961574310,
+      "updatedAt": 1718961574310,
+      "isDelete": false,
+      "id": 19
+    },
+    {
+      "hotelId": 1,
+      "name": "Phòng 201",
+      "sizeRoom": 25,
+      "user": 2,
+      "heading": "GIƯỜNG ĐƠN",
+      "floor": 2,
+      "price": 1200000,
+      "utilities": {
+        "shower": true,
+        "TV": true,
+        "phone": true,
+        "water": true
+      },
+      "imageList": [
+        "https://firebasestorage.googleapis.com/v0/b/bookhotel-60f63.appspot.com/o/files%2Ff3c7e331-1282-47a7-b44f-b4b3f98d804a?alt=media&token=0ca5301f-89f1-4e0a-b1f8-c5a68490aa00",
+        "https://firebasestorage.googleapis.com/v0/b/bookhotel-60f63.appspot.com/o/files%2Fe4222e8b-9ff2-4521-af9f-981096e87f18?alt=media&token=1ca2f663-750b-4005-b8f2-007bd0681164",
+        "https://firebasestorage.googleapis.com/v0/b/bookhotel-60f63.appspot.com/o/files%2Fec9f3cd1-9dab-4d3d-a987-4af45c88f3f0?alt=media&token=31c02c46-ab2e-49ab-96c0-9629b6a08904",
+        "https://firebasestorage.googleapis.com/v0/b/bookhotel-60f63.appspot.com/o/files%2F172f3e1e-753c-4a27-9709-2796164e1742?alt=media&token=45dd9746-3e29-4842-8b6e-f8c26448a777",
+        "https://firebasestorage.googleapis.com/v0/b/bookhotel-60f63.appspot.com/o/files%2Fe2ec28e6-5d4d-4215-9eb2-c4b50f355b3f?alt=media&token=619271d2-1093-47a4-aebe-9db8bbb333df",
+        "https://firebasestorage.googleapis.com/v0/b/bookhotel-60f63.appspot.com/o/files%2F63f6b562-d394-4df3-9775-e053b2b61aaf?alt=media&token=967f92d7-5f91-4a0a-8337-1352c3e8ca7a"
+      ],
+      "ListOfBookedRooms": [],
+      "createdAt": 1718962194903,
+      "updatedAt": 1718962194903,
+      "isDelete": false,
+      "id": 20
     }
   ],
   "bills": [
     {
-      "userId": 1,
+      "userId": 4,
       "pay": "no",
+      "billId": "4f9094f5-b027-4865-80fc-c7f2199596c7",
+      "roomId": "2",
+      "hotelId": 1,
+      "name": "Phòng 102",
+      "price": 740000,
       "fullName": "Ngô Văn Trị",
-      "email": "vantri2912@gmail.com",
-      "phoneNumber": "0912683524",
-      "checkInDate": "2024-06-12",
-      "checkoutDate": "2024-06-15",
-      "createdAt": 1718093620580,
-      "updatedAt": 1718093620580,
+      "CCCD": "202010121111",
+      "phoneNumber": "0912011211",
+      "checkInDate": "2024-07-20",
+      "checkOutDate": "2024-07-27",
+      "createdAt": 1719923000551,
+      "updatedAt": 1719923000551,
       "isDelete": false,
       "id": 1
     },
     {
-      "userId": 3,
+      "userId": 4,
       "pay": "no",
-      "billId": "c972fcb5-21bf-4e82-b0ff-c256aa184bd1",
-      "hotelId": "4",
+      "billId": "ed093a5e-9b2c-47e8-8e40-5e7e2a1843d8",
+      "roomId": "1",
+      "hotelId": 1,
+      "name": "Phòng 101",
+      "price": 800000,
       "fullName": "Ngô Văn Trị",
-      "email": "ngovantri2912@gmail.com",
-      "phoneNumber": "0912683524",
-      "checkInDate": "2024-06-12",
-      "checkoutDate": "2024-06-17",
-      "createdAt": 1718107643934,
-      "updatedAt": 1718107643934,
+      "CCCD": "129921192111",
+      "phoneNumber": "0921012010",
+      "checkInDate": "2024-08-10",
+      "checkOutDate": "2024-10-30",
+      "createdAt": 1719925098563,
+      "updatedAt": 1719925098563,
       "isDelete": false,
       "id": 2
+    },
+    {
+      "userId": 4,
+      "pay": "no",
+      "billId": "e8655976-42cd-4f10-8656-9e4b768feb7e",
+      "roomId": "2",
+      "hotelId": 1,
+      "name": "Phòng 102",
+      "price": 740000,
+      "fullName": "Dạ Thảo",
+      "CCCD": "129912112112",
+      "phoneNumber": "0921201212",
+      "checkInDate": "2024-07-05",
+      "checkOutDate": "2024-07-10",
+      "createdAt": 1720077217433,
+      "updatedAt": 1720077217433,
+      "isDelete": false,
+      "id": 3
+    }
+  ],
+  "reviews": [
+    {
+      "rate": 5,
+      "comment": "Khách sạn đẹp,chất lượng",
+      "userId": 4,
+      "hotelId": "1",
+      "imageReview": [
+        "https://firebasestorage.googleapis.com/v0/b/bookhotel-60f63.appspot.com/o/files%2F70f3cded-7c0a-436c-90b5-4d1eafb1c664?alt=media&token=a704daec-bc98-4787-b3fa-864565476de4",
+        "https://firebasestorage.googleapis.com/v0/b/bookhotel-60f63.appspot.com/o/files%2F4e0d5d7e-5852-42cf-a26b-8515d06d708d?alt=media&token=868aea6b-670c-40cd-ad14-ddbaf5be7d24"
+      ],
+      "createdAt": 1719017404760,
+      "updatedAt": 1719017404760,
+      "isDelete": false,
+      "id": 1
+    },
+    {
+      "rate": 4,
+      "comment": "Quá Oke",
+      "userId": 4,
+      "hotelId": "1",
+      "imageReview": [
+        "https://firebasestorage.googleapis.com/v0/b/bookhotel-60f63.appspot.com/o/files%2Fdcd8be9f-e4f9-4aa1-a1f5-d848589190b4?alt=media&token=0bfe8fd4-9a21-4a6c-9782-416b82e83193"
+      ],
+      "createdAt": 1719017536021,
+      "updatedAt": 1719017536021,
+      "isDelete": false,
+      "id": 2
+    }
+  ],
+  "cities": [
+    {
+      "id": 10993,
+      "name": "Hà Nội"
+    },
+    {
+      "id": 9737,
+      "name": "Hồ Chí Minh"
+    },
+    {
+      "id": 8113,
+      "name": "Cần Thơ"
+    },
+    {
+      "id": 3429,
+      "name": "Hải Phòng"
+    },
+    {
+      "id": 7224,
+      "name": "Đà Nẵng"
+    },
+    {
+      "id": 1283,
+      "name": "An Giang"
+    },
+    {
+      "id": 9646,
+      "name": "Bà Rịa-Vũng Tàu"
+    },
+    {
+      "id": 9520,
+      "name": "Bình Dương"
+    },
+    {
+      "id": 8487,
+      "name": "Bình Phước"
+    },
+    {
+      "id": 8889,
+      "name": "Bình Thuận"
+    },
+    {
+      "id": 5103,
+      "name": "Bình Định"
+    },
+    {
+      "id": 1446,
+      "name": "Bạc Liêu"
+    },
+    {
+      "id": 12555,
+      "name": "Bắc Cạn"
+    },
+    {
+      "id": 1915,
+      "name": "Bắc Giang"
+    },
+    {
+      "id": 4294,
+      "name": "Bắc Ninh"
+    },
+    {
+      "id": 2153,
+      "name": "Bến Tre"
+    },
+    {
+      "id": 12209,
+      "name": "Cao Bằng"
+    },
+    {
+      "id": 1518,
+      "name": "Cà Mau"
+    },
+    {
+      "id": 9139,
+      "name": "Gia Lai"
+    },
+    {
+      "id": 10365,
+      "name": "Hoà Bình"
+    },
+    {
+      "id": 1682,
+      "name": "Hà Giang"
+    },
+    {
+      "id": 4774,
+      "name": "Hà Nam"
+    },
+    {
+      "id": 5818,
+      "name": "Hà Tĩnh"
+    },
+    {
+      "id": 3668,
+      "name": "Hưng Yên"
+    },
+    {
+      "id": 4429,
+      "name": "Hải Dương"
+    },
+    {
+      "id": 8208,
+      "name": "Hậu Giang"
+    },
+    {
+      "id": 8666,
+      "name": "Khánh Hoà"
+    },
+    {
+      "id": 7952,
+      "name": "Kiên Giang"
+    },
+    {
+      "id": 9027,
+      "name": "Kon Tum"
+    },
+    {
+      "id": 11728,
+      "name": "Lai Châu"
+    },
+    {
+      "id": 10084,
+      "name": "Long An"
+    },
+    {
+      "id": 12702,
+      "name": "Lào Cai"
+    },
+    {
+      "id": 5712,
+      "name": "Lâm Đồng"
+    },
+    {
+      "id": 10615,
+      "name": "Lạng Sơn"
+    },
+    {
+      "id": 4897,
+      "name": "Nam Định"
+    },
+    {
+      "id": 6601,
+      "name": "Nghệ An"
+    },
+    {
+      "id": 2493,
+      "name": "Ninh Bình"
+    },
+    {
+      "id": 8816,
+      "name": "Ninh Thuận"
+    },
+    {
+      "id": 3856,
+      "name": "Phú Thọ"
+    },
+    {
+      "id": 5274,
+      "name": "Phú Yên"
+    },
+    {
+      "id": 6094,
+      "name": "Quảng Bình"
+    },
+    {
+      "id": 7289,
+      "name": "Quảng Nam"
+    },
+    {
+      "id": 7550,
+      "name": "Quảng Ngãi"
+    },
+    {
+      "id": 10853,
+      "name": "Quảng Ninh"
+    },
+    {
+      "id": 7066,
+      "name": "Quảng Trị"
+    },
+    {
+      "id": 8293,
+      "name": "Sóc Trăng"
+    },
+    {
+      "id": 11845,
+      "name": "Sơn La"
+    },
+    {
+      "id": 2647,
+      "name": "Thanh Hoá"
+    },
+    {
+      "id": 4643,
+      "name": "Thái Bình"
+    },
+    {
+      "id": 3311,
+      "name": "Thái Nguyên"
+    },
+    {
+      "id": 5368,
+      "name": "Thừa Thiên-Huế"
+    },
+    {
+      "id": 7673,
+      "name": "Tiền Giang"
+    },
+    {
+      "id": 2327,
+      "name": "Trà Vinh"
+    },
+    {
+      "id": 12513,
+      "name": "Tuyên Quang"
+    },
+    {
+      "id": 9415,
+      "name": "Tây Ninh"
+    },
+    {
+      "id": 1008,
+      "name": "Vĩnh Long"
+    },
+    {
+      "id": 4147,
+      "name": "Vĩnh Phúc"
+    },
+    {
+      "id": 12062,
+      "name": "Yên Bái"
+    },
+    {
+      "id": 12808,
+      "name": "Điện Biên"
+    },
+    {
+      "id": 9377,
+      "name": "Đắc Lắc"
+    },
+    {
+      "id": 5642,
+      "name": "Đắc Nông"
+    },
+    {
+      "id": 7800,
+      "name": "Đồng Nai"
+    },
+    {
+      "id": 1126,
+      "name": "Đồng Tháp"
     }
   ]
 }

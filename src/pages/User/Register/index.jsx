@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 
 import * as S from "./style";
-// import { registerRequest } from "redux/slicers/auth.slice";
 import { ROUTES } from "../../../constants/routes";
 import { registerRequest } from "../../../redux/slicers/auth.slicer";
 function Register() {

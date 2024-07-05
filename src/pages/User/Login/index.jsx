@@ -91,6 +91,7 @@ function Login() {
             fullName: user.displayName,
             password: "Tri@0935068648",
             phoneNumber: "",
+            role: "user",
             avatar:
               "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrZRHHcRuOyLqUlNqrvsA6jUy6j_KJwbJaOQrEoE-f&s",
           };

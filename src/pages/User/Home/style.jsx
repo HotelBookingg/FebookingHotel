@@ -69,7 +69,7 @@ export const HotelItem = styled.div`
 `;
 export const ImageWrapper = styled.div`
   width: 100%;
-  height: auto;
+  height: 200px;
   position: relative;
 `;
 export const Image = styled.img`

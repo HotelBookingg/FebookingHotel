@@ -76,6 +76,7 @@ export const authSlice = createSlice({
     logoutRequest: (state) => {
       state.userInfo.data = {};
       localStorage.removeItem("accessToken");
+      sessionStorage.removeItem("preLoginPath");
     },
     // getUserInfo
     getUserInfoRequest: (state, action) => {

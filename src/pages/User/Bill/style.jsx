@@ -10,7 +10,7 @@ export const BillWrapper = styled(Row)`
 `;
 export const BillPay = styled(Row)`
   /* align-items: center; */
-  max-height: 650px;
+  max-height: 600px;
   justify-content: space-between;
   width: 100%;
   max-width: 800px;
@@ -25,7 +25,7 @@ export const BillPay = styled(Row)`
 `;
 export const InfoWrapper = styled(Row)`
   width: 100%;
-  margin-top: 15px;
+  margin-top: 5px;
 `;
 export const Title = styled.div`
   font-size: 2.3rem;
@@ -41,12 +41,12 @@ export const Info = styled.div`
 `;
 export const HotelInfo = styled(Col)`
   font-size: 0.9rem;
-  margin-top: 20px;
+  margin-top: 10px;
   text-align: center;
 `;
 export const TitleInfo = styled(Col)`
   font-size: 1.1rem;
-  margin-top: 10px;
+  margin-top: 7px;
   font-weight: 600;
   text-align: center;
 `;
@@ -99,7 +99,7 @@ export const Revert = styled(Button)`
   align-items: center;
   justify-content: center;
   padding: 16px;
-  margin-top: 20px;
+  margin-top: 10px;
   color: ${color.primaryText};
   font-weight: 700;
   background-color: ${color.primary};

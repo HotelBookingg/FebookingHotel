@@ -19,7 +19,7 @@ import {
   getBillRequest,
   getBillSuccess,
   getBillFailure,
-} from "../slicers/bill.slicer";
+} from "../../redux/slicers/bill.slicer";
 
 function* getBillSaga(action) {
   try {
@@ -39,30 +39,19 @@ function* getBillSaga(action) {
 
 function* getBillListSaga(action) {
   try {
-    const { userId, page, limit, more, searchKey } = action.payload;
+    const { page, limit, more, searchKey, hotelId } = action.payload;
     let result;
-    if (userId) {
-      result = yield axios.get("http://localhost:4000/orders", {
-        params: {
-          _embed: "orderDetails",
-          userId: userId,
-          _sort: "createdAt",
-          _order: "desc",
-          _page: page,
-          _limit: limit,
-        },
-      });
-    } else {
-      result = yield axios.get("http://localhost:4000/orders", {
-        params: {
-          _embed: "orderDetails",
-          isDelete: false,
-          _sort: "createdAt",
-          _order: "desc",
-          ...(searchKey && { q: searchKey }),
-        },
-      });
-    }
+    result = yield axios.get("http://localhost:4000/bills", {
+      params: {
+        ...(hotelId && { hotelId: hotelId }),
+        _expand: "hotel",
+        _sort: "createdAt",
+        _order: "desc",
+        ...(page && { _page: page }),
+        ...(limit && { _limit: limit }),
+        ...(searchKey && { q: searchKey }),
+      },
+    });
 
     yield put(
       getBillListSuccess({
@@ -82,7 +71,7 @@ function* getBillListSaga(action) {
 function* billHotelSaga(action) {
   try {
     const { billHotelData, callback } = action.payload;
-    const orderResult = yield axios.post(
+    const billResult = yield axios.post(
       "http://localhost:4000/bills",
       billHotelData
     );
@@ -101,8 +90,8 @@ function* billHotelSaga(action) {
 function* updateBillSaga(action) {
   try {
     const { id } = action.payload;
-    const result = yield axios.patch(`http://localhost:4000/orders/${id}`, {
-      status: "confirm",
+    const result = yield axios.patch(`http://localhost:4000/bills/${id}`, {
+      pay: "yes",
     });
     yield put(updateBillSuccess({ data: result.data }));
     yield put(getBillListRequest({}));
@@ -113,7 +102,7 @@ function* updateBillSaga(action) {
 function* cancelBillSaga(action) {
   try {
     const { id } = action.payload;
-    const result = yield axios.patch(`http://localhost:4000/orders/${id}`, {
+    const result = yield axios.patch(`http://localhost:4000/bills/${id}`, {
       status: "cancel",
       isDelete: true,
     });

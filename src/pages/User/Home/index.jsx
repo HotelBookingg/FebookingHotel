@@ -16,6 +16,11 @@ function Home() {
 
   const { search } = useLocation();
 
+  const location = useLocation();
+
+  useEffect(() => {
+    sessionStorage.setItem("preLoginPath", location.pathname);
+  }, []);
   useEffect(() => {
     const searchParams = qs.parse(search, {
       ignoreQueryPrefix: true,
@@ -91,11 +96,11 @@ function Home() {
                     <Col span={12}>
                       <S.Price>
                         <S.OldPrice discount={item?.discount}>
-                          {item?.priceOld.toLocaleString()}.000
+                          {item?.priceOld.toLocaleString()}
                           <S.Unit>₫</S.Unit>
                         </S.OldPrice>
                         <S.CurrentPrice discount={item?.discount}>
-                          {item?.priceCurrent.toLocaleString()}.000{" "}
+                          {item?.priceCurrent.toLocaleString()}
                           <S.Unit>₫</S.Unit>
                         </S.CurrentPrice>
                       </S.Price>

@@ -10,7 +10,7 @@ export const Loading = styled.div`
   position: relative;
 `;
 export const LoadingWrapper = styled.div`
-  background: #f8f6f6;
+  background-color: rgba(255, 255, 255, 0.8);
   display: ${(props) => (props.isShowLoading ? " flex" : "none")};
   align-items: center;
   justify-content: center;

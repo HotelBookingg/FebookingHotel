@@ -14,17 +14,28 @@ import {
   getSearchHistoryRequest,
   getSearchHistorySuccess,
   getSearchHistoryFailure,
+  createHotelRequest,
+  createHotelSuccess,
+  createHotelFailure,
+  updateHotelRequest,
+  updateHotelSuccess,
+  updateHotelFailure,
+  deleteHotelFailure,
+  deleteHotelRequest,
+  deleteHotelSuccess,
 } from "../slicers/hotel.slicer";
 
 function* getHotelListSaga(action) {
   try {
-    const { page, limit, more, searchKey } = action.payload;
+    const { page, limit, more, searchKey, rooms, addressId } = action.payload;
     const result = yield axios.get("http://localhost:4000/hotels", {
       params: {
         isDelete: false,
         _page: page,
         _limit: limit,
+        city: addressId,
         q: searchKey,
+        ...(rooms && { _embed: "rooms" }),
       },
     });
 
@@ -45,11 +56,11 @@ function* getHotelListSaga(action) {
 }
 function* getHotelDetailSaga(action) {
   try {
-    const { id } = action.payload;
+    const { id, rooms } = action.payload;
     const result = yield axios.get(`http://localhost:4000/hotels/${id}`, {
       params: {
         isDelete: false,
-        _embed: "images",
+        ...(rooms && { _embed: "rooms" }),
       },
     });
     yield put(
@@ -61,13 +72,36 @@ function* getHotelDetailSaga(action) {
     yield put(getHotelDetailFailure({ error: "Lỗi" }));
   }
 }
-function* createSearchHistorySaga(action) {
+function* createHotelSaga(action) {
   try {
     const { data } = action.payload;
     const result = yield axios.post(`http://localhost:4000/hotels`, data);
-    yield put(createSearchHistorySuccess({ data: result.data }));
+    yield put(createHotelSuccess({ data: result.data }));
   } catch (e) {
-    yield put(createSearchHistoryFailure({ error: "Lỗi" }));
+    yield put(createHotelFailure({ error: "Lỗi" }));
+  }
+}
+function* updateHotelSaga(action) {
+  try {
+    const { data } = action.payload;
+    const result = yield axios.patch(
+      `http://localhost:4000/hotels/${data.id}`,
+      data
+    );
+    yield put(updateHotelSuccess({ data: result.data }));
+  } catch (e) {
+    yield put(updateHotelFailure({ error: "Lỗi" }));
+  }
+}
+function* deleteHotelSaga(action) {
+  try {
+    const { id } = action.payload;
+    yield axios.patch(`http://localhost:4000/hotels/${id}`, {
+      isDelete: true,
+    });
+    yield put(deleteHotelSuccess({ id: id }));
+  } catch (e) {
+    yield put(updateHotelFailure({ error: "Lỗi" }));
   }
 }
 function* getSearchHistorySaga(action) {
@@ -95,4 +129,7 @@ function* getSearchHistorySaga(action) {
 export default function* hotelSaga() {
   yield takeEvery(getHotelListRequest, getHotelListSaga);
   yield takeEvery(getHotelDetailRequest, getHotelDetailSaga);
+  yield takeEvery(createHotelRequest, createHotelSaga);
+  yield takeEvery(updateHotelRequest, updateHotelSaga);
+  yield takeEvery(deleteHotelRequest, deleteHotelSaga);
 }

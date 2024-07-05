@@ -1,9 +1,25 @@
 import { useEffect, useMemo } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Link, generatePath, useNavigate, useParams } from "react-router-dom";
+import {
+  Link,
+  generatePath,
+  useLocation,
+  useNavigate,
+  useParams,
+} from "react-router-dom";
 import dayjs from "dayjs";
 import customParseFormat from "dayjs/plugin/customParseFormat";
-import { Form, Button, Input, Row, Col, Space, Breadcrumb, Card } from "antd";
+import {
+  Form,
+  Button,
+  Input,
+  Row,
+  Col,
+  Space,
+  Breadcrumb,
+  Card,
+  notification,
+} from "antd";
 import { FaHome, FaShoppingCart } from "react-icons/fa";
 import { v4 } from "uuid";
 
@@ -11,7 +27,10 @@ import { ROUTES } from "constants/routes";
 import * as S from "./style";
 import { GUEST_ID } from "constants/guest";
 
-import { getHotelDetailRequest } from "../../../redux/slicers/hotel.slicer";
+import {
+  getRoomDetailRequest,
+  updateRoomRequest,
+} from "../../../redux/slicers/room.slicer";
 import { billHotelRequest } from "../../../redux/slicers/bill.slicer";
 
 dayjs.extend(customParseFormat);
@@ -23,14 +42,16 @@ function Checkout() {
   const navigate = useNavigate();
 
   const { userInfo } = useSelector((state) => state.auth);
-  const { hotelDetail } = useSelector((state) => state.hotel);
+  const { roomDetail } = useSelector((state) => state.room);
 
   const { id } = useParams();
 
-  const { data } = hotelDetail;
+  const { data } = roomDetail;
+  const location = useLocation();
 
   useEffect(() => {
-    dispatch(getHotelDetailRequest({ id }));
+    dispatch(getRoomDetailRequest({ id: id }));
+    sessionStorage.setItem("preLoginPath", location.pathname);
     window.scrollTo({
       top: 0,
     });
@@ -39,20 +60,60 @@ function Checkout() {
 
   const handleSubmitBillForm = (values) => {
     const billId = v4();
-    dispatch(
-      billHotelRequest({
-        billHotelData: {
-          note: values.note,
-          userId: userInfo.data.id || GUEST_ID,
-          pay: "no",
-          billId: billId,
-          hotelId: id,
-          ...values,
-        },
-        callback: () =>
-          navigate(generatePath(ROUTES.USER.BILL, { id: billId })),
-      })
+    const updatedListOfBookedRooms = [...data.ListOfBookedRooms];
+    const index = updatedListOfBookedRooms.findIndex(
+      (item) =>
+        (dayjs(values.checkInDate).isAfter(
+          dayjs(item.checkInDate).subtract(1, "day")
+        ) &&
+          dayjs(values.checkInDate).isBefore(
+            dayjs(item.checkOutDate).add(1, "day")
+          )) ||
+        (dayjs(values.checkOutDate).isAfter(
+          dayjs(item.checkInDate).subtract(1, "day")
+        ) &&
+          dayjs(values.checkOutDate).isBefore(
+            dayjs(item.checkOutDate).add(1, "day")
+          ))
     );
+    if (index !== -1) {
+      notification.error({
+        message:
+          "Trong số ngày này phòng đã được đặt, Vui lòng chọn phòng khác!",
+      });
+    } else {
+      updatedListOfBookedRooms.unshift({
+        userId: userInfo?.data?.id,
+        checkInDate: values.checkInDate,
+        checkOutDate: values.checkOutDate,
+      });
+      const { hotel, ...rest } = data;
+      dispatch(
+        updateRoomRequest({
+          data: {
+            ...rest,
+            ListOfBookedRooms: updatedListOfBookedRooms,
+          },
+        })
+      );
+      dispatch(
+        billHotelRequest({
+          billHotelData: {
+            note: values.note,
+            userId: userInfo.data.id || GUEST_ID,
+            pay: "no",
+            billId: billId,
+            roomId: id,
+            hotelId: data?.hotel?.id,
+            name: data?.name,
+            price: data?.price,
+            ...values,
+          },
+          callback: () =>
+            navigate(generatePath(ROUTES.USER.BILL, { id: billId })),
+        })
+      );
+    }
   };
 
   return (
@@ -74,7 +135,7 @@ function Checkout() {
               <Link to={ROUTES.USER.CART}>
                 <Space>
                   <FaShoppingCart />
-                  <span>Giỏ hàng</span>
+                  <span>Phòng</span>
                 </Space>
               </Link>
             ),
@@ -90,32 +151,22 @@ function Checkout() {
         <Col md={24} xl={24} xs={24}>
           <S.SubHeading>I.CHI TIẾT PHÒNG</S.SubHeading>
           <S.InfoRoomWrapper gutter={[16, 16]}>
-            <S.Title md={4} xs={7} lg={4}>
-              TÊN KHÁCH SẠN
-            </S.Title>
-            <S.Title md={12} xs={6} lg={8}>
-              HÌNH ẢNH
-            </S.Title>
-            <S.Title md={4} xs={4} lg={8}>
-              ĐỊA CHỈ
-            </S.Title>
-            <S.Title md={4} xs={7} lg={4}>
-              NGÀY ĐẶT PHÒNG
-            </S.Title>
-            <Col md={4} xs={7} lg={4}>
-              <S.InfoRoom>{data?.name}</S.InfoRoom>
+            <S.Title span={5}>TÊN KHÁCH SẠN</S.Title>
+            <S.Title span={5}>PHÒNG</S.Title>
+            <S.Title span={9}>ĐỊA CHỈ</S.Title>
+            <S.Title span={5}>NGÀY ĐẶT PHÒNG</S.Title>
+            <Col span={5}>
+              <S.InfoRoom>{data?.hotel?.name}</S.InfoRoom>
             </Col>
-            <Col md={12} xs={6} lg={8}>
+            <Col span={5}>
               <S.InfoRoom>
-                <S.ImageRoom
-                  src={data?.images ? data?.images[0]?.imageList[0] : "123"}
-                ></S.ImageRoom>
+                {data?.name}(Tầng {data?.floor})
               </S.InfoRoom>
             </Col>
-            <Col md={4} xs={4} lg={8}>
-              <S.InfoRoom>{data?.addressDetail}</S.InfoRoom>
+            <Col span={9}>
+              <S.InfoRoom>{data?.hotel?.addressDetail}</S.InfoRoom>
             </Col>
-            <Col md={4} xs={7} lg={4}>
+            <Col span={5}>
               <S.InfoRoom>{dayjs().format("DD/MM/YYYY")}</S.InfoRoom>
             </Col>
           </S.InfoRoomWrapper>
@@ -144,17 +195,17 @@ function Checkout() {
                   </Col>
                   <Col lg={12} md={12} sm={12} xs={24}>
                     <Form.Item
-                      label="Email"
-                      name="email"
+                      label="Hộ chiếu/CMND/CCCD"
+                      name="CCCD"
                       rules={[
                         { required: true, message: "Bắt buộc!" },
                         {
-                          type: "email",
-                          message: "Vui lòng điền đúng định dạng email",
+                          pattern: /^\d{12}$/,
+                          message: "Căn cước công dân phải 12 số!",
                         },
                       ]}
                     >
-                      <Input placeholder="Nhập gmail của bạn" />
+                      <Input placeholder="Nhập căn cước công dân của bạn" />
                     </Form.Item>
                   </Col>
                   <Col lg={12} md={12} sm={12} xs={24}>
@@ -194,7 +245,7 @@ function Checkout() {
                   <Col lg={12} md={12} sm={12} xs={24}>
                     <Form.Item
                       label="Ngày trả phòng"
-                      name="checkoutDate"
+                      name="checkOutDate"
                       rules={[
                         { required: true, message: "Bắt buộc!" },
                         ({ getFieldValue }) => ({
@@ -234,7 +285,7 @@ function Checkout() {
                         title="Giá phòng/ngày"
                       >
                         <S.TotalPrice>
-                          {data?.priceCurrent?.toLocaleString()}.000
+                          {data?.price?.toLocaleString()}
                           <S.Unit>₫</S.Unit>
                         </S.TotalPrice>
                       </Card>

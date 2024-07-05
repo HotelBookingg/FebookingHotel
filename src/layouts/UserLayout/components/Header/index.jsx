@@ -1,12 +1,7 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import * as S from "./style";
 import { ROUTES } from "constants/routes";
-import {
-  FaSearchengin,
-  FaSignOutAlt,
-  FaUserAlt,
-  FaUserEdit,
-} from "react-icons/fa";
+import { FaSearchengin, FaSignOutAlt, FaBed, FaUserEdit } from "react-icons/fa";
 
 import qs from "qs";
 
@@ -166,6 +161,50 @@ function Header() {
   //     });
   //   }
   // }, [searchSuggestions?.data, searchHistories?.data]);
+
+  const adminMenu = {
+    items: [
+      {
+        key: "1",
+        label: (
+          <Link to={ROUTES.ADMIN.MANAGE_HOTEL_RESERVATIONS}>
+            Quản lý đặt phòng
+          </Link>
+        ),
+        icon: <FaBed />,
+      },
+      {
+        key: "2",
+        label: "Đăng xuất",
+        onClick: () => {
+          dispatch(logoutRequest());
+          navigate(ROUTES.USER.HOME);
+        },
+        icon: <FaSignOutAlt />,
+      },
+    ],
+  };
+  const userMenu = {
+    items: [
+      {
+        key: "1",
+        label: (
+          <Link to={ROUTES.ADMIN.MANAGE_HOTEL_RESERVATIONS}>Phòng đã đặt</Link>
+        ),
+        icon: <FaBed />,
+      },
+      {
+        key: "2",
+        label: "Đăng xuất",
+        onClick: () => {
+          dispatch(logoutRequest());
+          navigate(ROUTES.USER.HOME);
+        },
+        icon: <FaSignOutAlt />,
+      },
+    ],
+  };
+
   return (
     <S.HeaderWrapper>
       <S.header>
@@ -191,26 +230,7 @@ function Header() {
         <S.LoginWrapper sm={11} xs={12} md={7} xl={6}>
           {userInfo?.data.email ? (
             <Dropdown
-              menu={{
-                items: [
-                  {
-                    key: "1",
-                    label: (
-                      <Link to={ROUTES.USER.USERINFO}>Thông tin cá nhân</Link>
-                    ),
-                    icon: <FaUserAlt />,
-                  },
-                  {
-                    key: "2",
-                    label: "Đăng xuất",
-                    onClick: () => {
-                      dispatch(logoutRequest());
-                      navigate(ROUTES.USER.HOME);
-                    },
-                    icon: <FaSignOutAlt />,
-                  },
-                ],
-              }}
+              menu={userInfo?.data?.role === "admin" ? adminMenu : userMenu}
             >
               <S.Login>
                 <FaUserEdit color={color.primaryText} size={30} />

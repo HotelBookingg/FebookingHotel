@@ -7,12 +7,13 @@ import * as S from "./style";
 import { useEffect } from "react";
 
 import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { jwtDecode } from "jwt-decode";
 
 import UserLayout from "layouts/UserLayout";
 import AuthLayout from "../layouts/AuthLayout";
 import NotFoundPage from "../layouts/NotFound";
+import AdminLayout from "layouts/AdminLayout";
 
 import Login from "../pages/User/Login";
 import Register from "../pages/User/Register";
@@ -21,13 +22,26 @@ import HotelDetail from "pages/User/HotelDetail";
 import Checkout from "pages/User/Checkout";
 import Bill from "pages/User/Bill";
 
+import ManagerHotelReservations from "pages/admin/ManageHotelReversions";
+import ManageHotel from "pages/admin/ManageHotel";
+import ManageReview from "pages/admin/ManageReview";
+import StatistiCalAndReview from "pages/admin/StatisticalAndReview";
+import StatistiCal from "pages/admin/Statistical";
+import CreateHotel from "pages/admin/CreateHotel";
+import UpdateHotel from "pages/admin/UpdateHotel";
+import CreateRoom from "pages/admin/CreateRoom";
+import UpdateRoom from "pages/admin/UpdateRoom";
+
 function App() {
   const dispatch = useDispatch();
   const [isShowLoading, setIsShowLoading] = useState(false);
 
+  const { createHotel } = useSelector((state) => state.hotel);
+
   useEffect(() => {
-    setIsShowLoading();
-  }, []);
+    document.title = "Đặt phòng khách sạn giá rẻ - Giá tốt nhất tại Traveloka";
+    setIsShowLoading(createHotel.loading);
+  }, [createHotel.loading]);
 
   useEffect(() => {
     const accessToken = localStorage.getItem("accessToken");
@@ -67,6 +81,25 @@ function App() {
           <Route path={ROUTES.LOGIN} element={<Login />} />
           <Route path={ROUTES.REGISTER} element={<Register />} />
         </Route>
+        <Route element={<AdminLayout />}>
+          <Route path={ROUTES.ADMIN.CREATE_HOTEL} element={<CreateHotel />} />
+          <Route path={ROUTES.ADMIN.UPDATE_HOTEL} element={<UpdateHotel />} />
+          <Route path={ROUTES.ADMIN.MANAGE_REVIEW} element={<ManageReview />} />
+          <Route path={ROUTES.ADMIN.STATISTICAL} element={<StatistiCal />} />
+          <Route path={ROUTES.ADMIN.CREATE_ROOM} element={<CreateRoom />} />
+          <Route path={ROUTES.ADMIN.UPDATE_ROOM} element={<UpdateRoom />} />
+
+          <Route
+            path={ROUTES.ADMIN.MANAGE_HOTEL_RESERVATIONS}
+            element={<ManagerHotelReservations />}
+          />
+          <Route
+            path={ROUTES.ADMIN.STATISTICAL_REVIEW}
+            element={<StatistiCalAndReview />}
+          />
+          <Route path={ROUTES.ADMIN.MANAGE_HOTEL} element={<ManageHotel />} />
+        </Route>
+        ;
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </>

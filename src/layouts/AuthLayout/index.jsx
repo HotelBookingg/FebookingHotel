@@ -1,5 +1,5 @@
 import { ROUTES } from "../../constants/routes";
-import { Outlet, useNavigate } from "react-router-dom";
+import { Outlet, useLocation, useNavigate } from "react-router-dom";
 
 import * as S from "./style";
 import { useEffect } from "react";
@@ -10,10 +10,13 @@ function AuthLayout() {
   const { userInfo } = useSelector((state) => state.auth);
   useEffect(() => {
     if (userInfo.data.id) {
+      const preLoginPath = sessionStorage.getItem("preLoginPath");
       if (userInfo.data.role === "admin") {
-        return navigate(ROUTES.ADMIN.DASHBOARD);
+        return preLoginPath
+          ? navigate(preLoginPath)
+          : navigate(ROUTES.ADMIN.MANAGE_HOTEL_RESERVATIONS);
       }
-      return navigate(ROUTES.USER.HOME);
+      return preLoginPath ? navigate(preLoginPath) : navigate(ROUTES.USER.HOME);
     }
   }, [userInfo.data.id]);
   return (

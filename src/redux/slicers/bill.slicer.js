@@ -32,7 +32,7 @@ const initialState = {
   },
 };
 
-export const orderSlice = createSlice({
+export const billSlice = createSlice({
   name: "bill",
   initialState,
   reducers: {
@@ -42,8 +42,9 @@ export const orderSlice = createSlice({
       state.billList.error = null;
     },
     getBillListSuccess: (state, action) => {
-      const { data, page, limit, more } = action.payload;
+      const { data, meta, more } = action.payload;
       state.billList.data = data;
+      state.billList.meta = meta;
       state.billList.loading = false;
     },
     getBillListFailure: (state, action) => {
@@ -87,7 +88,7 @@ export const orderSlice = createSlice({
     },
     updateBillSuccess: (state, action) => {
       state.updateBillData.loading = false;
-      notification.success({ message: "Đã xác nhận đơn hàng!" });
+      notification.success({ message: "Đã xác nhận thanh toán!" });
     },
     updateBillFailure: (state, action) => {
       const { error } = action.payload;
@@ -144,6 +145,6 @@ export const {
   confirmPayRequest,
   confirmPaySuccess,
   confirmPayFailure,
-} = orderSlice.actions;
+} = billSlice.actions;
 
-export default orderSlice.reducer;
+export default billSlice.reducer;

@@ -1,22 +1,26 @@
 import * as S from "./style";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Card, Col, Row } from "antd";
+import { Card, Col, Row, notification } from "antd";
 import dayjs from "dayjs";
 import { ROUTES } from "constants/routes";
 
 import { getBillRequest } from "../../../redux/slicers/bill.slicer";
 
 function Bill() {
+  const location = useLocation();
   useEffect(() => {
+    notification.success({
+      message: "Đặt phòng thành công!",
+    });
     window.scrollTo({
       top: 0,
     });
     document.title = "Hóa đơn chi tiết";
+    sessionStorage.setItem("preLoginPath", location.pathname);
   }, []);
 
-  const { userInfo } = useSelector((state) => state.auth);
   const { bill } = useSelector((state) => state.bill);
 
   const { data } = bill;
@@ -40,13 +44,13 @@ function Bill() {
           <S.ImageLogo src="https://d1785e74lyxkqq.cloudfront.net/_next/static/v2/9/97f3e7a54e9c6987283b78e016664776.svg"></S.ImageLogo>
         </Col>
         <Col span={24}>
-          <S.NameHotel>KHÁCH SẠN TRE XANH</S.NameHotel>
+          <S.NameHotel>KHÁCH SẠN {data?.hotel?.name}</S.NameHotel>
         </Col>
         <S.InfoWrapper>
           <Col span={16}>
-            <S.Info>Tên KH:Ngô Văn Trị</S.Info>
-            <S.Info>SDT:0377460815</S.Info>
-            <S.Info>Địa chỉ khách sạn</S.Info>
+            <S.Info>Tên KH: {data?.fullName}</S.Info>
+            <S.Info>Hộ chiếu/CMND/CCCD: {data?.CCCD}</S.Info>
+            <S.Info>Địa chỉ: {data?.hotel?.addressDetail}</S.Info>
           </Col>
           <Col span={8}>
             <S.CodeBill>
@@ -64,7 +68,7 @@ function Bill() {
               </S.BookingInfo>
               <S.BookingInfo>
                 <p>Ngày trả phòng</p>
-                <span>{dayjs(data?.checkoutDate).format("DD/MM/YYYY")}</span>
+                <span>{dayjs(data?.checkOutDate).format("DD/MM/YYYY")}</span>
               </S.BookingInfo>
             </S.CodeBill>
           </Col>
@@ -72,37 +76,48 @@ function Bill() {
         <S.Dot>
           ....................................................................................................................................................
         </S.Dot>
-        <S.TitleInfo span={4}>Tên khách sạn</S.TitleInfo>
-        <S.TitleInfo span={8}>Số ngày</S.TitleInfo>
-        <S.TitleInfo span={12}>Đơn giá</S.TitleInfo>
-        <S.HotelInfo span={4}>{data?.hotel?.name}</S.HotelInfo>
-        <S.HotelInfo span={8}>
-          {dayjs(data?.checkoutDate).diff(dayjs(data.checkInDate), "day", true)}
-        </S.HotelInfo>
-        <S.HotelInfo span={12}>{data?.hotel?.priceCurrent}.000VND</S.HotelInfo>
-        <S.HotelInfo span={8}></S.HotelInfo>
-        <S.HotelInfo span={8}></S.HotelInfo>
-        <Col span={8}>
-          <Card size="small" style={{ marginTop: "2em" }} title="Tổng tiền">
-            <S.TotalPrice>
-              {dayjs(data?.checkoutDate).diff(
-                dayjs(data.checkInDate),
-                "day",
-                true
-              ) > 0
-                ? Math.ceil(
-                    dayjs(data?.checkoutDate).diff(
-                      dayjs(data.checkInDate),
-                      "day",
-                      true
-                    )
-                  ) * data?.hotel?.priceCurrent
-                : data?.hotel?.priceCurrent}
-              .000
-              <S.Unit>₫</S.Unit>
-            </S.TotalPrice>
-          </Card>
-        </Col>
+        <Row gutter={[16, 16]} style={{ width: "100%" }}>
+          <Col span={18}>
+            <Row gutter={[16, 16]} style={{ width: "100%" }}>
+              <S.TitleInfo span={8}>Phòng</S.TitleInfo>
+              <S.TitleInfo span={8}>Số ngày</S.TitleInfo>
+              <S.TitleInfo span={8}>Đơn giá</S.TitleInfo>
+              <S.HotelInfo span={8}>{data?.name}</S.HotelInfo>
+              <S.HotelInfo span={8}>
+                {dayjs(data?.checkOutDate).diff(
+                  dayjs(data.checkInDate),
+                  "day",
+                  true
+                )}
+              </S.HotelInfo>
+              <S.HotelInfo span={8}>
+                {data?.price?.toLocaleString()}
+              </S.HotelInfo>
+            </Row>
+          </Col>
+          <Col span={6}>
+            <Card size="small" title="Tổng tiền">
+              <S.TotalPrice>
+                {dayjs(data?.checkOutDate).diff(
+                  dayjs(data.checkInDate),
+                  "day",
+                  true
+                ) > 0
+                  ? (
+                      Math.ceil(
+                        dayjs(data?.checkOutDate).diff(
+                          dayjs(data.checkInDate),
+                          "day",
+                          true
+                        )
+                      ) * data?.price
+                    )?.toLocaleString()
+                  : data?.price?.toLocaleString()}
+                <S.Unit>₫</S.Unit>
+              </S.TotalPrice>
+            </Card>
+          </Col>
+        </Row>
         <S.Dot>
           ....................................................................................................................................................
         </S.Dot>

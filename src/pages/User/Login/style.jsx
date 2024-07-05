@@ -136,11 +136,6 @@ export const Rectangle = styled.div`
   width: 100px;
   height: 50px;
   transform: rotate(-25deg);
-  /* @media screen and (max-width: 1024px) {
-    border-left: 30px solid transparent;no
-    border-right: 30px solid transparent;
-    border-bottom: 52.2px solid #3498db;
-  } */
 `;
 export const Right = styled(Col)`
   background-color: #fff;

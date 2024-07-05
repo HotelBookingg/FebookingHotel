@@ -24,7 +24,7 @@ root.render(
               headerSplitColor: "#ADD8E6",
             },
             Carousel: {
-              colorBgContainer: "red",
+              colorBgContainer: "#308bb2",
             },
           },
         }}

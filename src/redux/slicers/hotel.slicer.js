@@ -12,6 +12,18 @@ const initialState = {
     loading: false,
     error: null,
   },
+  createHotel: {
+    loading: false,
+    error: null,
+  },
+  updateHotel: {
+    loading: false,
+    error: null,
+  },
+  deleteHotel: {
+    loading: false,
+    error: null,
+  },
   searchSuggestions: {
     data: [],
     loading: false,
@@ -43,6 +55,63 @@ export const hotelSlice = createSlice({
       const { error } = action.payload;
       state.hotelList.loading = false;
       state.hotelList.error = error;
+    },
+    // createHotel
+    createHotelHappening: (state, action) => {
+      state.createHotel.loading = true;
+    },
+    createHotelFinish: (state, action) => {
+      state.createHotel.loading = false;
+    },
+    createHotelRequest: (state, action) => {
+      state.createHotel.loading = true;
+      state.createHotel.error = null;
+    },
+    createHotelSuccess: (state, action) => {
+      const { data } = action.payload;
+      state.hotelList.data = [...state.hotelList.data, data];
+      state.createHotel.loading = false;
+    },
+    createHotelFailure: (state, action) => {
+      const { error } = action.payload;
+      state.createHotel.loading = false;
+      state.createHotel.error = error;
+    },
+    //updateHotel
+    updateHotelHappening: (state, action) => {
+      state.updateHotel.loading = true;
+    },
+    updateHotelFinish: (state, action) => {
+      state.updateHotel.loading = false;
+    },
+    updateHotelRequest: (state, action) => {
+      state.updateHotel.loading = true;
+      state.updateHotel.error = null;
+    },
+    updateHotelSuccess: (state, action) => {
+      const { data } = action.payload;
+      state.updateHotel.loading = false;
+    },
+    updateHotelFailure: (state, action) => {
+      const { error } = action.payload;
+      state.updateHotel.loading = false;
+      state.updateHotel.error = error;
+    },
+    //delete hotel
+    deleteHotelFailure: (state, action) => {
+      state.deleteHotel.loading = false;
+    },
+    deleteHotelRequest: (state, action) => {
+      state.deleteHotel.loading = true;
+      state.deleteHotel.error = null;
+    },
+    deleteHotelSuccess: (state, action) => {
+      const { id } = action.payload;
+      state.deleteHotel.loading = false;
+      state.hotelList.data = state.hotelList.data.filter(
+        (item) => item.id !== id
+      );
+      notification.success({ message: "Xóa khách sạn thành công!" });
     },
     // getHotelDetail
     getHotelDetailRequest: (state, action) => {
@@ -108,6 +177,19 @@ export const {
   getSearchHistoryRequest,
   getSearchHistorySuccess,
   getSearchHistoryFailure,
+  createHotelRequest,
+  createHotelSuccess,
+  createHotelFailure,
+  createHotelHappening,
+  createHotelFinish,
+  updateHotelRequest,
+  updateHotelSuccess,
+  updateHotelFailure,
+  updateHotelHappening,
+  updateHotelFinish,
+  deleteHotelFailure,
+  deleteHotelRequest,
+  deleteHotelSuccess,
 } = hotelSlice.actions;
 
 export default hotelSlice.reducer;
