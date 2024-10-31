@@ -1,13 +1,7 @@
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import * as S from "./style";
 import { ROUTES } from "constants/routes";
-import {
-  FaBed,
-  FaSearchengin,
-  FaSignOutAlt,
-  FaUserAlt,
-  FaUserEdit,
-} from "react-icons/fa";
+import { FaBed, FaSignOutAlt, FaUserEdit } from "react-icons/fa";
 
 import qs from "qs";
 

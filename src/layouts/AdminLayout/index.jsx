@@ -1,5 +1,4 @@
 import { ROUTES } from "constants/routes";
-import { useState } from "react";
 import { useSelector } from "react-redux";
 import { Navigate, Outlet, useNavigate } from "react-router-dom";
 
@@ -8,7 +7,6 @@ import * as S from "./style";
 import { useEffect } from "react";
 
 function AdminLayout() {
-  const [isShowSidebar, setIsShowSidebar] = useState(true);
   const { userInfo } = useSelector((state) => state.auth);
   const accessToken = localStorage.getItem("accessToken");
 

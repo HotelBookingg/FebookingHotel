@@ -1053,9 +1053,15 @@
         "https://firebasestorage.googleapis.com/v0/b/bookhotel-60f63.appspot.com/o/files%2F308d7749-3214-4c4d-b3be-2115878da9ef?alt=media&token=07263fb4-b90c-4ae1-993d-76dae8af2281",
         "https://firebasestorage.googleapis.com/v0/b/bookhotel-60f63.appspot.com/o/files%2F96fca50d-8fd3-425a-9e22-46f439b31e1e?alt=media&token=4e8ed9c3-065b-42ec-b423-f048e06d2734"
       ],
-      "ListOfBookedRooms": [],
+      "ListOfBookedRooms": [
+        {
+          "userId": 2,
+          "checkInDate": "2024-12-15",
+          "checkOutDate": "2024-12-16"
+        }
+      ],
       "createdAt": 1718961574310,
-      "updatedAt": 1718961574310,
+      "updatedAt": 1730382534570,
       "isDelete": false,
       "id": 19
     },
@@ -1109,7 +1115,7 @@
     },
     {
       "userId": 4,
-      "pay": "no",
+      "pay": "yes",
       "billId": "ed093a5e-9b2c-47e8-8e40-5e7e2a1843d8",
       "roomId": "1",
       "hotelId": 1,
@@ -1121,7 +1127,7 @@
       "checkInDate": "2024-08-10",
       "checkOutDate": "2024-10-30",
       "createdAt": 1719925098563,
-      "updatedAt": 1719925098563,
+      "updatedAt": 1730382761088,
       "isDelete": false,
       "id": 2
     },
@@ -1142,6 +1148,24 @@
       "updatedAt": 1720077217433,
       "isDelete": false,
       "id": 3
+    },
+    {
+      "userId": 2,
+      "pay": "yes",
+      "billId": "18af7228-32f3-4d8e-b38f-b8664ebafa54",
+      "roomId": "19",
+      "hotelId": 1,
+      "name": "Phòng 103",
+      "price": 920000,
+      "fullName": "Ngô Văn Trị",
+      "CCCD": "091202011212",
+      "phoneNumber": "0377460815",
+      "checkInDate": "2024-12-15",
+      "checkOutDate": "2024-12-16",
+      "createdAt": 1730382534571,
+      "updatedAt": 1730382745073,
+      "isDelete": false,
+      "id": 4
     }
   ],
   "reviews": [
