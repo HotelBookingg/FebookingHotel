@@ -655,6 +655,10 @@
       ],
       "ListOfBookedRooms": [
         {
+          "checkInDate": "2024-11-14",
+          "checkOutDate": "2024-11-15"
+        },
+        {
           "checkInDate": "2024-06-15",
           "checkOutDate": "2024-06-20"
         }
@@ -670,7 +674,7 @@
       "heading": "Superior Double",
       "floor": 4,
       "price": 780000,
-      "updatedAt": 1718358490741
+      "updatedAt": 1731394139699
     },
     {
       "isDelete": false,
@@ -1166,6 +1170,25 @@
       "updatedAt": 1730382745073,
       "isDelete": false,
       "id": 4
+    },
+    {
+      "userId": 4,
+      "pay": "no",
+      "billId": "cfdba1b1-a87e-4003-a00a-f02f10525e0c",
+      "roomId": "5",
+      "hotelId": 3,
+      "name": "Phòng 101",
+      "price": 780000,
+      "fullName": "Ngô Văn Trị",
+      "CCCD": "092101021112",
+      "phoneNumber": "0912219121",
+      "checkInDate": "2024-11-14",
+      "checkOutDate": "2024-11-15",
+      "paymentMethod": "cash",
+      "createdAt": 1731394139705,
+      "updatedAt": 1731394139705,
+      "isDelete": false,
+      "id": 5
     }
   ],
   "reviews": [

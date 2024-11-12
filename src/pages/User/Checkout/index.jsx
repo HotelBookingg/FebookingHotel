@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {
   Link,
@@ -19,7 +19,9 @@ import {
   Breadcrumb,
   Card,
   notification,
+  Radio,
 } from "antd";
+
 import { FaHome, FaShoppingCart } from "react-icons/fa";
 import { v4 } from "uuid";
 
@@ -43,6 +45,10 @@ function Checkout() {
 
   const { userInfo } = useSelector((state) => state.auth);
   const { roomDetail } = useSelector((state) => state.room);
+
+  const [checkin, setCheckin] = useState(undefined);
+  const [checkout, setCheckout] = useState(undefined);
+  const [payments, setPayments] = useState(false);
 
   const { id } = useParams();
 
@@ -82,37 +88,96 @@ function Checkout() {
           "Trong số ngày này phòng đã được đặt, Vui lòng chọn phòng khác!",
       });
     } else {
-      updatedListOfBookedRooms.unshift({
-        userId: userInfo?.data?.id,
-        checkInDate: values.checkInDate,
-        checkOutDate: values.checkOutDate,
+      if (values.paymentMethod === "cash" || payments) {
+        updatedListOfBookedRooms.unshift({
+          userId: userInfo?.data?.id,
+          checkInDate: values.checkInDate,
+          checkOutDate: values.checkOutDate,
+        });
+        const { hotel, ...rest } = data;
+        dispatch(
+          updateRoomRequest({
+            data: {
+              ...rest,
+              ListOfBookedRooms: updatedListOfBookedRooms,
+            },
+          })
+        );
+        dispatch(
+          billHotelRequest({
+            billHotelData: {
+              note: values.note,
+              userId: userInfo.data.id || GUEST_ID,
+              pay: payments ? "yes" : "no",
+              billId: billId,
+              roomId: id,
+              hotelId: data?.hotel?.id,
+              name: data?.name,
+              price: data?.price,
+              ...values,
+            },
+            callback: () =>
+              navigate(generatePath(ROUTES.USER.BILL, { id: billId })),
+          })
+        );
+      } else {
+        handlePayment();
+      }
+    }
+  };
+  const handlePayment = async () => {
+    const amount =
+      dayjs(checkout).diff(dayjs(checkin), "day") > 0
+        ? Math.ceil(dayjs(checkout).diff(dayjs(checkin), "day", true)) *
+          data?.price
+        : data?.price;
+
+    try {
+      // Gửi yêu cầu thanh toán đến MoMo
+      const response = await fetch("http://localhost:4000/payments", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          amount: amount,
+          orderInfo: "Thanh toán khách sạn",
+        }),
       });
-      const { hotel, ...rest } = data;
-      dispatch(
-        updateRoomRequest({
-          data: {
-            ...rest,
-            ListOfBookedRooms: updatedListOfBookedRooms,
-          },
-        })
-      );
-      dispatch(
-        billHotelRequest({
-          billHotelData: {
-            note: values.note,
-            userId: userInfo.data.id || GUEST_ID,
-            pay: "no",
-            billId: billId,
-            roomId: id,
-            hotelId: data?.hotel?.id,
-            name: data?.name,
-            price: data?.price,
-            ...values,
-          },
-          callback: () =>
-            navigate(generatePath(ROUTES.USER.BILL, { id: billId })),
-        })
-      );
+
+      const result = await response.json();
+
+      // Kiểm tra xem có URL thanh toán không
+      if (result.payUrl) {
+        // Mở URL thanh toán trong tab mới
+        window.open(result.payUrl, "_blank");
+
+        // Kiểm tra trạng thái thanh toán
+        const paymentStatusResponse = await fetch(
+          `http://localhost:4000/payment-status/${result.orderId}`
+        ); // Giả định rằng result.orderId là ID đơn hàng
+        const paymentStatus = await paymentStatusResponse.json();
+
+        // Xử lý trạng thái thanh toán
+        if (paymentStatus.status === "SUCCESS") {
+          setPayments(true);
+        } else {
+          // Xử lý trường hợp thanh toán không thành công
+          console.error("Thanh toán không thành công:", paymentStatus);
+          notification.error({
+            message: "Thanh toán không thành công!",
+            description: paymentStatus.message || "Vui lòng thử lại.",
+          });
+        }
+      } else {
+        console.log("Kết quả thanh toán:", result);
+      }
+    } catch (error) {
+      console.error("Thanh toán thất bại:", error);
+      notification.error({
+        message: "Có lỗi xảy ra!",
+        description: "Vui lòng kiểm tra lại.",
+      });
     }
   };
 
@@ -239,7 +304,10 @@ function Checkout() {
                         },
                       ]}
                     >
-                      <Input type="date" />
+                      <Input
+                        onChange={(e) => setCheckin(e.target.value)}
+                        type="date"
+                      />
                     </Form.Item>
                   </Col>
                   <Col lg={12} md={12} sm={12} xs={24}>
@@ -263,7 +331,10 @@ function Checkout() {
                         }),
                       ]}
                     >
-                      <Input type="date" />
+                      <Input
+                        onChange={(e) => setCheckout(e.target.value)}
+                        type="date"
+                      />
                     </Form.Item>
                   </Col>
                 </Row>
@@ -294,6 +365,28 @@ function Checkout() {
                 </Row>
               </Col>
             </Row>
+            <Card
+              size="small"
+              title="Thông tin thanh toán"
+              style={{ marginBottom: 24 }}
+            >
+              <Row gutter={[16, 16]}>
+                <Col span={24}>
+                  <Form.Item
+                    label="Phương thức thanh toán"
+                    name="paymentMethod"
+                    rules={[{ required: true, message: "Required!" }]}
+                  >
+                    <Radio.Group>
+                      <Space direction="vertical">
+                        <Radio value="cash">Tiền mặt</Radio>
+                        <Radio value="momo">Thanh toán bằng MoMo</Radio>
+                      </Space>
+                    </Radio.Group>
+                  </Form.Item>
+                </Col>
+              </Row>
+            </Card>
             <Row
               gutter={[16, 16]}
               justify="space-between"

@@ -1,5 +1,5 @@
 import { ROUTES } from "../../constants/routes";
-import { Outlet, useLocation, useNavigate } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 
 import * as S from "./style";
 import { useEffect } from "react";

@@ -22,7 +22,7 @@ const twitterProvider = new firebase.auth.TwitterAuthProvider();
 function Login() {
   const [loginForm] = Form.useForm();
 
-  const { loginData, registerData } = useSelector((state) => state.auth);
+  const { loginData } = useSelector((state) => state.auth);
   const { userList } = useSelector((state) => state.auth);
 
   useEffect(() => {
@@ -31,7 +31,6 @@ function Login() {
   }, []);
 
   const dispatch = useDispatch();
-  const navigate = useNavigate();
   useEffect(() => {
     if (loginData.error) {
       loginForm.setFields([
