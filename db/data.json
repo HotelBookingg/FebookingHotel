@@ -50,11 +50,23 @@
       "updatedAt": 1718325257928,
       "isDelete": false,
       "id": 4
+    },
+    {
+      "email": "ngovantri123@gmail.com",
+      "password": "$2a$10$rrVXYbxULrf/KiRyMcX6Geo/bf6b1XA3LV2/lPXZMv.oud7LmjDFm",
+      "fullName": "aaaaaaaaaaaaaaaaaa",
+      "agree": true,
+      "role": "user",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrZRHHcRuOyLqUlNqrvsA6jUy6j_KJwbJaOQrEoE-f&s",
+      "createdAt": 1733485653743,
+      "updatedAt": 1733485653743,
+      "isDelete": false,
+      "id": 5
     }
   ],
   "hotels": [
     {
-      "isDelete": false,
+      "isDelete": true,
       "id": 1,
       "name": "DAVUE HOTEL",
       "image": "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10038281-1228x921-FIT_AND_TRIM-96c5061e4e6b1a533574c8f5c6454d29.jpeg?_src=imagekit&tr=c-at_max,h-360,q-40,w-640",
@@ -94,7 +106,7 @@
       ],
       "introduce": "Davue Hotel Da Nang là một khách sạn nằm trong khu vực an ninh, toạ lạc tại Mỹ An. Quầy tiếp tân 24 giờ luôn sẵn sàng phục vụ quý khách từ thủ tục nhận phòng đến trả phòng hay bất kỳ yêu cầu nào. Nếu cần giúp đỡ xin hãy liên hệ đội ngũ tiếp tân.",
       "addressDetail": "57-59 Đỗ Bí, Mỹ An, Ngũ Hành Sơn, Đà Nẵng, Việt Nam",
-      "updatedAt": 1719015281078
+      "updatedAt": 1733485441628
     },
     {
       "isDelete": false,
@@ -655,6 +667,11 @@
       ],
       "ListOfBookedRooms": [
         {
+          "userId": 1,
+          "checkInDate": "2024-12-12",
+          "checkOutDate": "2024-12-14"
+        },
+        {
           "checkInDate": "2024-11-14",
           "checkOutDate": "2024-11-15"
         },
@@ -674,7 +691,7 @@
       "heading": "Superior Double",
       "floor": 4,
       "price": 780000,
-      "updatedAt": 1731394139699
+      "updatedAt": 1733484411691
     },
     {
       "isDelete": false,
@@ -1189,6 +1206,25 @@
       "updatedAt": 1731394139705,
       "isDelete": false,
       "id": 5
+    },
+    {
+      "userId": 1,
+      "pay": "no",
+      "billId": "8acbc78f-61f8-4614-b747-b39a36c185e1",
+      "roomId": "5",
+      "hotelId": 3,
+      "name": "Phòng 101",
+      "price": 780000,
+      "fullName": "Ngô Văn Trị",
+      "CCCD": "129212120312",
+      "phoneNumber": "0912012312",
+      "checkInDate": "2024-12-12",
+      "checkOutDate": "2024-12-14",
+      "paymentMethod": "cash",
+      "createdAt": 1733484411692,
+      "updatedAt": 1733484411692,
+      "isDelete": false,
+      "id": 6
     }
   ],
   "reviews": [
